@@ -1,19 +1,6 @@
 [Desktop Entry]
 Type=Service
 Name=Mobipocket thumbnailer
-Name[el]=Δημιουργία εικόνων επισκόπησης Mobipocket
-Name[et]=Mobipocketi pisipildid
-Name[fr]=Générateur d'aperçu Mobipocket
-Name[ga]=Mionsamhlóir Mobipocket
-Name[nds]=Mobipocket-Vöransichten
-Name[nl]=Mobipocket-miniatuurmaker
-Name[pt]=Miniatura do Mobipocket
-Name[pt_BR]=Miniatura do Mobipocket
-Name[sv]=Mobipocket miniatyrbilder
-Name[tr]=Mobipocket küçük resim oluşturucu
-Name[uk]=Інструмент створення мініатюр Mobipocket
-Name[x-test]=xxMobipocket thumbnailerxx
-Name[zh_CN]=Mobipocket 缩略图器
 X-KDE-ServiceTypes=ThumbCreator
 MimeType=application/x-mobipocket-ebook;
 X-KDE-Library=mobithumbnail
