@@ -1,11 +1,13 @@
 [Desktop Entry]
 Type=Service
 Name=RAW Photo Camera files
+Name[da]=RAW kamera-filer
 Name[de]=RAW-Fotokamera-Dateien
 Name[es]=Archivos RAW de cámara fotográfica
 Name[pt]=Ficheiros de máquinas fotográficas RAW
 Name[pt_BR]=Arquivos RAW de câmeras fotográficas
 Name[sv]=Obehandlade kamerafotofiler
+Name[tr]=HAM Fotoğraf Makinesi dosyaları
 Name[uk]=Цифрові негативи фотоапаратів
 Name[zh_TW]=原始相機檔
 X-KDE-ServiceTypes=ThumbCreator
