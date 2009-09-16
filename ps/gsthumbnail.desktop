@@ -2,6 +2,7 @@
 Type=Service
 Name=PostScript, PDF and DVI Files
 Name[ar]=ملفات PostScript, PDF و DVI
+Name[bg]=PostScript, PDF and DVI Files
 Name[br]=Restroù PostScript, PDF ha DVI
 Name[ca]=Fitxers PostScript, PDF i DVI
 Name[cs]=Postscriptové, PDF a DVI soubory
@@ -9,6 +10,7 @@ Name[cy]=Ffeiliau PostScript, PDF a DVI
 Name[da]=PostScript, PDF- og DVI-filer
 Name[de]=PostScript-, PDF- und DVI-Dateien
 Name[el]=Αρχεία PostScript, PDF και DVI
+Name[en_GB]=PostScript, PDF and DVI Files
 Name[eo]=Postskriptaj, PDF kaj DVI dosieroj
 Name[es]=Archivos PostScript, PDF y DVI
 Name[et]=PostScript-, PDF- ja DVI-failid
