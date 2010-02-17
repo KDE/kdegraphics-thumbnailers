@@ -433,7 +433,11 @@ bool GSCreator::create(const QString &path, int width, int height, QImage &img)
     }
 
     int status = 0;
-    if (waitpid(pid, &status, 0) != pid || (status != 0  && status != 256) )
+    int ret;
+    do {
+      ret = waitpid(pid, &status, 0);
+    } while (ret == -1 && errno == EINTR);
+    if (ret != pid || (status != 0  && status != 256) )
       ok = false;
   }
   else {
