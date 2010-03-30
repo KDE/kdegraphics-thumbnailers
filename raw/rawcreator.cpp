@@ -36,12 +36,10 @@ RAWCreator::RAWCreator()
 {
     m_dcr=new KDcrawIface::KDcraw();
     m_exiv=new KExiv2Iface::KExiv2();
-    m_preview=new QImage();
 }
 
 RAWCreator::~RAWCreator()
 {
-    delete m_preview;
     delete m_exiv;
     delete m_dcr;
 }
@@ -56,8 +54,8 @@ bool RAWCreator::create(const QString &path, int width, int height, QImage &img)
     {
 
         //Load the image into a QImage
-        m_preview->loadFromData(data);
-        if (m_preview->isNull()) 
+        QImage preview;
+        if (!preview.loadFromData(data) || preview.isNull())
            return false;
 
         //And its EXIF info
@@ -74,27 +72,27 @@ bool RAWCreator::create(const QString &path, int width, int height, QImage &img)
                 case KExiv2Iface::KExiv2::ORIENTATION_NORMAL:
                     break; //we do nothing
                 case KExiv2Iface::KExiv2::ORIENTATION_HFLIP:
-                    *m_preview = m_preview->mirrored(true,false);
+                    preview = preview.mirrored(true,false);
                     break;
                 case KExiv2Iface::KExiv2::ORIENTATION_ROT_180:
-                    *m_preview = m_preview->transformed(QMatrix().rotate(180));
+                    preview = preview.transformed(QMatrix().rotate(180));
                     break;
                 case KExiv2Iface::KExiv2::ORIENTATION_VFLIP:
-                    *m_preview = m_preview->mirrored(false,true);
+                    preview = preview.mirrored(false,true);
                     break;
                 case KExiv2Iface::KExiv2::ORIENTATION_ROT_90_HFLIP:
-                    *m_preview = m_preview->mirrored(true,false);
-                    *m_preview = m_preview->transformed(QMatrix().rotate(90));
+                    preview = preview.mirrored(true,false);
+                    preview = preview.transformed(QMatrix().rotate(90));
                     break;
                 case KExiv2Iface::KExiv2::ORIENTATION_ROT_90:
-                    *m_preview = m_preview->transformed(QMatrix().rotate(90));
+                    preview = preview.transformed(QMatrix().rotate(90));
                     break;
                 case KExiv2Iface::KExiv2::ORIENTATION_ROT_90_VFLIP:
-                    *m_preview = m_preview->mirrored(false,true);
-                    *m_preview = m_preview->transformed(QMatrix().rotate(90));
+                    preview = preview.mirrored(false,true);
+                    preview = preview.transformed(QMatrix().rotate(90));
                     break;
                 case KExiv2Iface::KExiv2::ORIENTATION_ROT_270:
-                    *m_preview = m_preview->transformed(QMatrix().rotate(270));
+                    preview = preview.transformed(QMatrix().rotate(270));
                     break;
                 default:
                     break;
@@ -102,7 +100,7 @@ bool RAWCreator::create(const QString &path, int width, int height, QImage &img)
         }
 
         //Scale the image as requested by the thumbnailer
-        img=m_preview->scaled(width,height,Qt::KeepAspectRatio);
+        img=preview.scaled(width,height,Qt::KeepAspectRatio);
 
     }
     return loaded;

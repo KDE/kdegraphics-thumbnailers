@@ -34,7 +34,6 @@ namespace KExiv2Iface
     class KExiv2;
 }
 
-class QImage;
 
 class RAWCreator : public QObject, public ThumbCreator
 {
@@ -48,7 +47,6 @@ public:
 private:
     KDcrawIface::KDcraw *m_dcr;
     KExiv2Iface::KExiv2 *m_exiv;
-    QImage* m_preview;
 };
 
 #endif
