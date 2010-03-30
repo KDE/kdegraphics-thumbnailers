@@ -34,12 +34,10 @@ extern "C"
 
 RAWCreator::RAWCreator()
 {
-    m_exiv=new KExiv2Iface::KExiv2();
 }
 
 RAWCreator::~RAWCreator()
 {
-    delete m_exiv;
 }
 
 bool RAWCreator::create(const QString &path, int width, int height, QImage &img)
@@ -57,11 +55,12 @@ bool RAWCreator::create(const QString &path, int width, int height, QImage &img)
            return false;
 
         //And its EXIF info
-        if (m_exiv->load(data))
+        KExiv2Iface::KExiv2 exiv;
+        if (exiv.load(data))
         {
             //We managed reading the EXIF info, rotate the image
             //according to the EXIF orientation flag
-            KExiv2Iface::KExiv2::ImageOrientation orient=m_exiv->getImageOrientation();
+            KExiv2Iface::KExiv2::ImageOrientation orient=exiv.getImageOrientation();
 
             //Rotate according to the EXIF orientation flag
             switch(orient)

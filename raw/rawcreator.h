@@ -23,10 +23,6 @@
 #include <kio/thumbcreator.h>
 
 
-namespace KExiv2Iface
-{
-    class KExiv2;
-}
 
 
 class RAWCreator : public ThumbCreator
@@ -38,7 +34,6 @@ public:
     virtual Flags flags() const;
 
 private:
-    KExiv2Iface::KExiv2 *m_exiv;
 };
 
 #endif
