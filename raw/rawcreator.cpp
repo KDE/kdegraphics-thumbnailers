@@ -37,12 +37,10 @@ RAWCreator::RAWCreator()
     m_dcr=new KDcrawIface::KDcraw();
     m_exiv=new KExiv2Iface::KExiv2();
     m_preview=new QImage();
-    m_data=new QByteArray();
 }
 
 RAWCreator::~RAWCreator()
 {
-    delete m_data;
     delete m_preview;
     delete m_exiv;
     delete m_dcr;
@@ -50,20 +48,20 @@ RAWCreator::~RAWCreator()
 
 bool RAWCreator::create(const QString &path, int width, int height, QImage &img)
 {
-    //reset and load the image into the QByteArray
-    m_data->clear();  
-    bool loaded=m_dcr->loadEmbeddedPreview(*m_data,path);
+    //load the image into the QByteArray
+    QByteArray data;
+    bool loaded=m_dcr->loadEmbeddedPreview(data,path);
 
     if (loaded)
     {
 
         //Load the image into a QImage
-        m_preview->loadFromData(*m_data);
+        m_preview->loadFromData(data);
         if (m_preview->isNull()) 
            return false;
 
         //And its EXIF info
-        if (m_exiv->load(*m_data))
+        if (m_exiv->load(data))
         {
             //We managed reading the EXIF info, rotate the image
             //according to the EXIF orientation flag
