@@ -20,7 +20,6 @@
 #ifndef RAWCREATOR_H
 #define RAWCREATOR_H
 
-#include <QObject>
 #include <kio/thumbcreator.h>
 
 
@@ -35,9 +34,8 @@ namespace KExiv2Iface
 }
 
 
-class RAWCreator : public QObject, public ThumbCreator
+class RAWCreator : public ThumbCreator
 {
-    Q_OBJECT
 public:
     RAWCreator();
     virtual ~RAWCreator();

@@ -111,5 +111,3 @@ ThumbCreator::Flags RAWCreator::flags() const
 {
     return (Flags)(0);
 }
-
-#include "rawcreator.moc"
