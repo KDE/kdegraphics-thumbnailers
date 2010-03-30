@@ -34,21 +34,19 @@ extern "C"
 
 RAWCreator::RAWCreator()
 {
-    m_dcr=new KDcrawIface::KDcraw();
     m_exiv=new KExiv2Iface::KExiv2();
 }
 
 RAWCreator::~RAWCreator()
 {
     delete m_exiv;
-    delete m_dcr;
 }
 
 bool RAWCreator::create(const QString &path, int width, int height, QImage &img)
 {
     //load the image into the QByteArray
     QByteArray data;
-    bool loaded=m_dcr->loadEmbeddedPreview(data,path);
+    bool loaded=KDcrawIface::KDcraw::loadEmbeddedPreview(data,path);
 
     if (loaded)
     {

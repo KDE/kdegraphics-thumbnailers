@@ -23,11 +23,6 @@
 #include <kio/thumbcreator.h>
 
 
-namespace KDcrawIface
-{
-    class KDcraw;
-}
-
 namespace KExiv2Iface
 {
     class KExiv2;
@@ -43,7 +38,6 @@ public:
     virtual Flags flags() const;
 
 private:
-    KDcrawIface::KDcraw *m_dcr;
     KExiv2Iface::KExiv2 *m_exiv;
 };
 
