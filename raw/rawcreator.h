@@ -35,7 +35,6 @@ namespace KExiv2Iface
 }
 
 class QImage;
-class QMatrix;
 class QByteArray;
 
 class RAWCreator : public QObject, public ThumbCreator
@@ -51,7 +50,6 @@ private:
     KDcrawIface::KDcraw *m_dcr;
     KExiv2Iface::KExiv2 *m_exiv;
     QImage* m_preview;
-    QMatrix* m_matrix;
     QByteArray* m_data;
 };
 
