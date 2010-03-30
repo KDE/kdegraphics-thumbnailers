@@ -22,9 +22,6 @@
 
 #include <kio/thumbcreator.h>
 
-
-
-
 class RAWCreator : public ThumbCreator
 {
 public:
@@ -32,8 +29,6 @@ public:
     virtual ~RAWCreator();
     virtual bool create(const QString &path, int width, int height, QImage &img);
     virtual Flags flags() const;
-
-private:
 };
 
 #endif

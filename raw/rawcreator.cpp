@@ -103,7 +103,6 @@ bool RAWCreator::create(const QString &path, int width, int height, QImage &img)
     return loaded;
 }
 
-
 ThumbCreator::Flags RAWCreator::flags() const
 {
     return (Flags)(0);
