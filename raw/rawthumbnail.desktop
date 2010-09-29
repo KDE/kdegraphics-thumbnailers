@@ -1,6 +1,9 @@
 [Desktop Entry]
 Type=Service
 Name=RAW Photo Camera Files
+Name[pt]=Ficheiros de Máquinas Fotográficas RAW
+Name[sv]=Obehandlade kamerafotofiler
+Name[uk]=Файли цифрових негативів
 Name[x-test]=xxRAW Photo Camera Filesxx
 X-KDE-ServiceTypes=ThumbCreator
 MimeType=image/x-canon-cr2;image/x-canon-crw;image/x-nikon-nef;image/x-adobe-dng;image/x-kodak-dcr;image/x-kodak-k25;image/x-kodak-kdc;image/x-olympus-orf;image/x-sony-arw;image/x-sony-sr2;image/x-sony-srf;image/x-fuji-raf;image/x-minolta-mrw;image/x-panasonic-raw;image/x-pentax-pef;image/x-sigma-x3f;image/x-kde-raw;
