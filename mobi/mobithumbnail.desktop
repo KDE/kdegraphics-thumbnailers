@@ -1,12 +1,15 @@
 [Desktop Entry]
 Type=Service
 Name=Mobipocket Files
+Name[en_GB]=Mobipocket Files
 Name[es]=Archivos Mobipocket
 Name[nl]=Mobipocket-bestanden
 Name[pt]=Ficheiros do Mobipocket
+Name[pt_BR]=Arquivos do Mobipocket
 Name[sv]=Mobipocket-filer
 Name[uk]=Файли Mobipocket
 Name[x-test]=xxMobipocket Filesxx
+Name[zh_TW]=Mobipocket 檔案
 X-KDE-ServiceTypes=ThumbCreator
 MimeType=application/x-mobipocket-ebook;
 X-KDE-Library=mobithumbnail
