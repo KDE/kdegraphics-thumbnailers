@@ -2,6 +2,7 @@
 Type=Service
 Name=Mobipocket Files
 Name[bg]=Файлове за Mobipocket
+Name[de]=Mobipocket-Dateien
 Name[en_GB]=Mobipocket Files
 Name[es]=Archivos Mobipocket
 Name[et]=Mobipocketi failid
