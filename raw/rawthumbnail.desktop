@@ -15,6 +15,7 @@ Name[pt_BR]=Arquivos RAW de câmeras fotográficas
 Name[sv]=Obehandlade kamerafotofiler
 Name[uk]=Файли цифрових негативів
 Name[x-test]=xxRAW Photo Camera Filesxx
+Name[zh_CN]=RAW 照片相机文件
 Name[zh_TW]=原始相機檔
 X-KDE-ServiceTypes=ThumbCreator
 # image/x-dcraw is the subclass for all "raw" image formats, so no need to list them all
