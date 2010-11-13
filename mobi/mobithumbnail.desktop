@@ -2,6 +2,8 @@
 Type=Service
 Name=Mobipocket Files
 Name[bg]=Файлове за Mobipocket
+Name[ca]=Fitxers Mobipocket
+Name[da]=Mobipocket-filer
 Name[de]=Mobipocket-Dateien
 Name[en_GB]=Mobipocket Files
 Name[es]=Archivos Mobipocket

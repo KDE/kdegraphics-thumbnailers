@@ -2,6 +2,8 @@
 Type=Service
 Name=RAW Photo Camera Files
 Name[bg]=Снимки RAW от фотоапарат
+Name[ca]=Fitxers RAW de càmera de fotos
+Name[da]=Kamera-filer i RAW-foto
 Name[de]=RAW-Fotokamera-Dateien
 Name[en_GB]=RAW Photo Camera Files
 Name[es]=Archivos RAW de cámara fotográfica
