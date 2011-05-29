@@ -13,8 +13,6 @@ macro_optional_find_package(Kdcraw)
 macro_optional_find_package(LCMS)
 macro_optional_add_subdirectory(ps)
 
-#add_subdirectory(mobi)
-
 macro_log_feature(KEXIV2_FOUND "libkexiv2" "Required to build the RAW thumbnailer" "www.kde.org" FALSE "" "")
 macro_log_feature(KDCRAW_FOUND "libkdcraw" "Required to build the RAW thumbnailer" "www.kde.org" FALSE "" "")
 macro_log_feature(LCMS_FOUND "lcms" "Required to build the RAW thumbnailer" "www.littlecms.org" FALSE "" "")
