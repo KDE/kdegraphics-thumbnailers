@@ -1,21 +1,23 @@
+project(kdegraphics-thumbnailers)
+
 find_package(KDE4 REQUIRED)
 include(KDE4Defaults)
 include(MacroLibrary)
 include(MacroOptionalAddSubdirectory)
 
-include_directories(${KSANE_INCLUDE_DIR})
-add_definitions (${QT_DEFINITIONS} ${QT_QTDBUS_DEFINITIONS} ${KDE4_DEFINITIONS})
-include_directories (${QDBUS_INCLUDE_DIRS} ${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${KDE4_INCLUDES})
-
+add_definitions(${QT_DEFINITIONS} ${KDE4_DEFINITIONS})
+include_directories(${KDE4_INCLUDES})
 
 macro_optional_find_package(Kexiv2)
 macro_optional_find_package(Kdcraw)
-macro_optional_add_subdirectory(ps)
 
-macro_log_feature(KEXIV2_FOUND "libkexiv2" "Required to build the RAW thumbnailer" "www.kde.org" FALSE "" "")
-macro_log_feature(KDCRAW_FOUND "libkdcraw" "Required to build the RAW thumbnailer" "www.kde.org" FALSE "" "")
-macro_display_feature_log()
+macro_log_feature(KEXIV2_FOUND "libkexiv2" "A library for reading and writing image metadata" "www.kde.org" FALSE "" "Required to build the RAW thumbnailer")
+macro_log_feature(KDCRAW_FOUND "libkdcraw" "A library for accessing raw files" "www.kde.org" FALSE "" "Required to build the RAW thumbnailer")
+
+macro_optional_add_subdirectory(ps)
 
 if(KEXIV2_FOUND AND KDCRAW_FOUND)
 macro_optional_add_subdirectory(raw)
 endif()
+
+macro_display_feature_log()
