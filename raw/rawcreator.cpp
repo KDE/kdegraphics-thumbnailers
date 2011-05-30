@@ -56,7 +56,7 @@ bool RAWCreator::create(const QString &path, int width, int height, QImage &img)
 
         //And its EXIF info
         KExiv2Iface::KExiv2 exiv;
-        if (exiv.load(data))
+        if (exiv.loadFromData(data))
         {
             //We managed reading the EXIF info, rotate the image
             //according to the EXIF orientation flag
