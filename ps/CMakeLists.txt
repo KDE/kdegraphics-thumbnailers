@@ -1,5 +1,3 @@
-include_directories( ${CMAKE_SOURCE_DIR}/kghostview  )
-
 add_definitions (-DQT3_SUPPORT -DQT3_SUPPORT_WARNINGS)
 
 ########### next target ###############
