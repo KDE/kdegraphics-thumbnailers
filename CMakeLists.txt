@@ -5,7 +5,7 @@ include(KDE4Defaults)
 include(MacroLibrary)
 include(MacroOptionalAddSubdirectory)
 
-add_definitions(${QT_DEFINITIONS} ${KDE4_DEFINITIONS})
+add_definitions(${QT_DEFINITIONS} ${KDE4_DEFINITIONS} -DQT_USE_FAST_CONCATENATION -DQT_USE_FAST_OPERATOR_PLUS)
 include_directories(${KDE4_INCLUDES})
 
 macro_optional_find_package(Kexiv2)
