@@ -565,8 +565,8 @@ bool GSCreator::getEPSIPreview(const QString &path, long start, long
   }
 
   unsigned int colors = (1U << depth);
-  QImage img(width, height, imagedepth, colors);
-  img.setAlphaBuffer(false);
+  QImage img(width, height, QImage::Format_Indexed8);
+  img.setColorCount(colors);
 
   if (imagedepth <= 8) {
     for (unsigned int gray = 0; gray < colors; gray++) {
@@ -618,7 +618,7 @@ bool GSCreator::getEPSIPreview(const QString &path, long start, long
     }
   }
 
-  outimg = img.convertDepth(32).scaled(imgwidth, imgheight, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+  outimg = img.convertToFormat(QImage::Format_RGB32).scaled(imgwidth, imgheight, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
 
   return true;
 }
