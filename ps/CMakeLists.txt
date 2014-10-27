@@ -3,10 +3,10 @@
 set(gsthumbnail_PART_SRCS gscreator.cpp dscparse.cpp dscparse_adapter.cpp)
 
 
-kde4_add_plugin(gsthumbnail ${gsthumbnail_PART_SRCS})
+add_library(gsthumbnail MODULE ${gsthumbnail_PART_SRCS})
 
 
-target_link_libraries(gsthumbnail  ${KDE4_KDECORE_LIBS} ${KDE4_KIO_LIBS} ${QT_QTGUI_LIBRARY} )
+target_link_libraries(gsthumbnail  Qt5::Gui KF5::KIOWidgets )
 
 install(TARGETS gsthumbnail  DESTINATION ${PLUGIN_INSTALL_DIR} )
 

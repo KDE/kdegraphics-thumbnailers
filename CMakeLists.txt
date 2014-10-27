@@ -1,23 +1,43 @@
 project(kdegraphics-thumbnailers)
 
-find_package(KDE4 REQUIRED)
-include(KDE4Defaults)
-include(MacroLibrary)
-include(MacroOptionalAddSubdirectory)
+cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
+set(QT_MIN_VERSION "5.2.0")
 
-add_definitions(${QT_DEFINITIONS} ${KDE4_DEFINITIONS} -DQT_USE_FAST_CONCATENATION -DQT_USE_FAST_OPERATOR_PLUS)
-include_directories(${KDE4_INCLUDES})
+find_package(ECM 1.0.0 REQUIRED NO_MODULE)
+set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
-macro_optional_find_package(Kexiv2)
-macro_optional_find_package(Kdcraw)
+include(ECMOptionalAddSubdirectory)
+include(KDEInstallDirs)
+include(KDECMakeSettings)
+include(KDECompilerSettings)
+include(FeatureSummary)
 
-macro_log_feature(KEXIV2_FOUND "libkexiv2" "A library for reading and writing image metadata" "www.kde.org" FALSE "" "Required to build the RAW thumbnailer")
-macro_log_feature(KDCRAW_FOUND "libkdcraw" "A library for accessing raw files" "www.kde.org" FALSE "" "Required to build the RAW thumbnailer")
+find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Gui)
+find_package(KF5 REQUIRED COMPONENTS KIO)
 
-macro_optional_add_subdirectory(ps)
+add_definitions(${QT_DEFINITIONS} -DQT_USE_FAST_CONCATENATION -DQT_USE_FAST_OPERATOR_PLUS)
 
-if(KEXIV2_FOUND AND KDCRAW_FOUND)
-macro_optional_add_subdirectory(raw)
+find_package(KF5KExiv2)
+set_package_properties("KF5KExiv2"    PROPERTIES
+                       DESCRIPTION "A library for reading and writing image metadata"
+                       URL         "www.kde.org"
+                       TYPE        OPTIONAL
+                       PURPOSE     "Required to build the RAW thumbnailer"
+)
+
+find_package(KF5KDcraw)
+set_package_properties("KF5KDcraw"    PROPERTIES
+                       DESCRIPTION "A library for accessing raw files"
+                       URL         "www.kde.org"
+                       TYPE        OPTIONAL
+                       PURPOSE     "Required to build the RAW thumbnailer"
+)
+
+
+ecm_optional_add_subdirectory(ps)
+
+if(KF5KExiv2_FOUND AND KF5KDcraw_FOUND)
+ecm_optional_add_subdirectory(raw)
 endif()
 
-macro_display_feature_log()
+feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
