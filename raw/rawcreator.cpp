@@ -21,12 +21,12 @@
 
 #include <QImage>
 
-#include <libkdcraw/kdcraw.h>
-#include <libkexiv2/kexiv2.h>
+#include <kdcraw/kdcraw.h>
+#include <kexiv2/kexiv2.h>
 
 extern "C"
 {
-    KDE_EXPORT ThumbCreator *new_creator()
+    Q_DECL_EXPORT ThumbCreator *new_creator()
     {
         return new RAWCreator;
     }
