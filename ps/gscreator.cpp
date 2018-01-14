@@ -447,7 +447,18 @@ bool GSCreator::create(const QString &path, int width, int height, QImage &img)
   }
   close(output[0]);
 
-  int l = img.loadFromData( data );
+  bool loaded = img.loadFromData( data );
+
+  if (!loaded) {
+    // Sometimes gs spits some warning messages before the actual image
+    // try to skip them
+    const QByteArray pngHeader = "\x89\x50\x4E\x47\x0D\x0A\x1A\x0A";
+    const int pngMarkerIndex = data.indexOf(pngHeader);
+    if (pngMarkerIndex > 0) {
+      data = data.mid(pngMarkerIndex);
+      loaded = img.loadFromData( data );
+    }
+  }
 
   if ( got_sig_term &&
 	oldhandler != SIG_ERR &&
@@ -457,7 +468,7 @@ bool GSCreator::create(const QString &path, int width, int height, QImage &img)
   }
   if ( oldhandler != SIG_ERR ) signal( SIGTERM, oldhandler );
 
-  return ok && l;
+  return ok && loaded;
 }
 
 ThumbCreator::Flags GSCreator::flags() const
