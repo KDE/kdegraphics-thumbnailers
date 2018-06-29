@@ -15,7 +15,7 @@ include(FeatureSummary)
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Gui)
 find_package(KF5 REQUIRED COMPONENTS KIO)
 
-add_definitions(${QT_DEFINITIONS} -DQT_USE_FAST_CONCATENATION -DQT_USE_FAST_OPERATOR_PLUS)
+add_definitions(-DQT_USE_QSTRINGBUILDER)
 
 find_package(KF5KExiv2)
 set_package_properties("KF5KExiv2"    PROPERTIES
