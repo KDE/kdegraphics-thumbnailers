@@ -233,15 +233,18 @@ bool GSCreator::create(const QString &path, int width, int height, QImage &img)
     }
   }
 
+  std::auto_ptr<KDSCBBOX> bbox = dsc.bbox();
+
   const bool is_encapsulated = no_dvi &&
     (path.indexOf(QRegExp("\\.epsi?$", Qt::CaseInsensitive)) > 0) &&
-    (dsc.bbox()->width() > 0) && (dsc.bbox()->height() > 0) &&
+     bbox.get() != nullptr &&
+    (bbox->width() > 0) && (bbox->height() > 0) &&
     (dsc.page_count() <= 1);
 
   char translation[64] = "";
   char pagesize[32] = "";
   char resopt[32] = "";
-  std::auto_ptr<KDSCBBOX> bbox = dsc.bbox();
+
   if (is_encapsulated) {
     // GhostScript's rendering at the extremely low resolutions
     // required for thumbnails leaves something to be desired. To
