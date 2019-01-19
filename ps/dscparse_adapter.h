@@ -125,7 +125,7 @@ public:
 
 class KDSCOkErrorHandler : public KDSCErrorHandler
 {
-    Response error( const KDSCError& );
+    Response error( const KDSCError& ) override;
 };
 
 class KDSCCommentHandler
@@ -335,7 +335,7 @@ public:
 	_commentHandler( commentHandler ) 
     {}
     
-    virtual bool scanData( char* buf, unsigned int count );
+    bool scanData( char* buf, unsigned int count ) override;
 
 protected:
     KDSCCommentHandler* _commentHandler;

@@ -27,9 +27,9 @@ class GSCreator : public ThumbCreator, public KDSCCommentHandler
 {
 public:
     GSCreator() {}
-    virtual bool create(const QString &path, int, int, QImage &img);
-    virtual Flags flags() const;
-    void comment(Name name);
+    bool create(const QString &path, int, int, QImage &img) override;
+    Flags flags() const override;
+    void comment(Name name) override;
 
 private:
     static bool getEPSIPreview(const QString &path,

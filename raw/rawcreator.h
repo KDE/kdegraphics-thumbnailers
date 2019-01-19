@@ -26,9 +26,9 @@ class RAWCreator : public ThumbCreator
 {
 public:
     RAWCreator();
-    virtual ~RAWCreator();
-    virtual bool create(const QString &path, int width, int height, QImage &img);
-    virtual Flags flags() const;
+    ~RAWCreator() override;
+    bool create(const QString &path, int width, int height, QImage &img) override;
+    Flags flags() const override;
 };
 
 #endif
