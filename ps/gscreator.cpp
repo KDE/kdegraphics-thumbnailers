@@ -117,12 +117,12 @@ static const char * gsargs_ps[] = {
     "-dLastPage=1",
     "-q",
     "-",
-    0, // file name
+    nullptr, // file name
     "-c",
     "showpage",
     "-c",
     "quit",
-    0
+    nullptr
 };
 
 static const char * gsargs_eps[] = {
@@ -132,11 +132,11 @@ static const char * gsargs_eps[] = {
     "-dSAFER",
     "-dPARANOIDSAFER",
     "-dNOPAUSE",
-    0, // page size
-    0, // resolution
+    nullptr, // page size
+    nullptr, // resolution
     "-q",
     "-",
-    0, // file name
+    nullptr, // file name
     "-c",
     "pagelevel",
     "-c",
@@ -147,7 +147,7 @@ static const char * gsargs_eps[] = {
     "showpage",
     "-c",
     "quit",
-    0
+    nullptr
 };
 
 static const char *dvipsargs[] = {
@@ -157,8 +157,8 @@ static const char *dvipsargs[] = {
     "-q",
     "-o",
     "-",
-    0, // file name
-    0
+    nullptr, // file name
+    nullptr
 };
 
 static bool correctDVI(const QString& filename);
@@ -217,7 +217,7 @@ bool GSCreator::create(const QString &path, int width, int height, QImage &img)
   if (no_dvi)
   {
     FILE* fp = fopen(QFile::encodeName(path), "r");
-    if (fp == 0) return false;
+    if (fp == nullptr) return false;
 
     char buf[4096];
     int count;
@@ -407,7 +407,7 @@ bool GSCreator::create(const QString &path, int width, int height, QImage &img)
 	  tv.tv_usec = 0;
 
 	  got_sig_term = false;
-	  if (select(output[0] + 1, &fds, 0, 0, &tv) <= 0) {
+	  if (select(output[0] + 1, &fds, nullptr, nullptr, &tv) <= 0) {
             if ( ( errno == EINTR || errno == EAGAIN ) && !got_sig_term ) continue;
 	    break; // error, timeout or master wants us to quit (SIGTERM)
           }
@@ -524,7 +524,7 @@ bool GSCreator::getEPSIPreview(const QString &path, long start, long
 {
   FILE *fp;
   fp = fopen(QFile::encodeName(path), "r");
-  if (fp == 0) return false;
+  if (fp == nullptr) return false;
 
   const long previewsize = end - start + 1;
 

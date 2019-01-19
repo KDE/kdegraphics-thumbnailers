@@ -118,11 +118,11 @@ KDSCErrorHandler::Response KDSCOkErrorHandler::error( const KDSCError& err )
 /*-- KDSC implementation ---------------------------------------------------*/
 
 KDSC::KDSC() :
-    _errorHandler( 0 ),
-    _commentHandler( 0 )
+    _errorHandler( nullptr ),
+    _commentHandler( nullptr )
 {
     _cdsc = dsc_init( this );
-    Q_ASSERT( _cdsc != 0 );
+    Q_ASSERT( _cdsc != nullptr );
     _scanHandler = new KDSCScanHandler( _cdsc );
 }
 
@@ -284,16 +284,16 @@ const CDSCMEDIA* KDSC::page_media() const
 
 auto_ptr<KDSCBBOX> KDSC::bbox() const
 {
-    if( _cdsc->bbox == 0 )
-	return auto_ptr<KDSCBBOX>( 0 );
+    if( _cdsc->bbox == nullptr )
+	return auto_ptr<KDSCBBOX>( nullptr );
     else
 	return auto_ptr<KDSCBBOX>( new KDSCBBOX( *_cdsc->bbox ) );
 }
 
 auto_ptr<KDSCBBOX> KDSC::page_bbox() const
 {
-    if( _cdsc->page_bbox == 0 )
-	return auto_ptr<KDSCBBOX>( 0 );
+    if( _cdsc->page_bbox == nullptr )
+	return auto_ptr<KDSCBBOX>( nullptr );
     else
 	return auto_ptr<KDSCBBOX>( new KDSCBBOX( *_cdsc->page_bbox ) );
 }
@@ -336,8 +336,8 @@ KDSCErrorHandler* KDSC::errorHandler() const
 void KDSC::setErrorHandler( KDSCErrorHandler* errorHandler )
 {
     _errorHandler = errorHandler;
-    if( errorHandler == 0 )
-	dsc_set_error_function( _cdsc, 0 );
+    if( errorHandler == nullptr )
+	dsc_set_error_function( _cdsc, nullptr );
     else
 	dsc_set_error_function( _cdsc, &errorFunction );
 }
@@ -349,12 +349,12 @@ KDSCCommentHandler* KDSC::commentHandler() const
 
 void KDSC::setCommentHandler( KDSCCommentHandler* commentHandler )
 {
-    if( _commentHandler != 0 && commentHandler == 0 )
+    if( _commentHandler != nullptr && commentHandler == nullptr )
     {
 	delete _scanHandler;
 	_scanHandler = new KDSCScanHandler( _cdsc );
     }
-    else if( _commentHandler == 0 && commentHandler != 0 )
+    else if( _commentHandler == nullptr && commentHandler != nullptr )
     {
 	delete _scanHandler;
 	_scanHandler = new KDSCScanHandlerByLine( _cdsc, commentHandler );
