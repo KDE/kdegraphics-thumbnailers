@@ -20,7 +20,7 @@
 #ifndef RAWCREATOR_H
 #define RAWCREATOR_H
 
-#include <kio/thumbcreator.h>
+#include <KIO/ThumbCreator>
 
 class RAWCreator : public ThumbCreator
 {

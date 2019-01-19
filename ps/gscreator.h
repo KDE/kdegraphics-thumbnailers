@@ -20,7 +20,7 @@
 #ifndef _GSCREATOR_H_
 #define _GSCREATOR_H_
 
-#include <kio/thumbcreator.h>
+#include <KIO/ThumbCreator>
 #include "dscparse_adapter.h"
 
 class GSCreator : public ThumbCreator, public KDSCCommentHandler
