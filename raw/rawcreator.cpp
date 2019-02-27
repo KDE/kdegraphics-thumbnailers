@@ -72,24 +72,24 @@ bool RAWCreator::create(const QString &path, int width, int height, QImage &img)
                     preview = preview.mirrored(true,false);
                     break;
                 case KExiv2Iface::KExiv2::ORIENTATION_ROT_180:
-                    preview = preview.transformed(QMatrix().rotate(180));
+                    preview = preview.transformed(QTransform().rotate(180));
                     break;
                 case KExiv2Iface::KExiv2::ORIENTATION_VFLIP:
                     preview = preview.mirrored(false,true);
                     break;
                 case KExiv2Iface::KExiv2::ORIENTATION_ROT_90_HFLIP:
                     preview = preview.mirrored(true,false);
-                    preview = preview.transformed(QMatrix().rotate(90));
+                    preview = preview.transformed(QTransform().rotate(90));
                     break;
                 case KExiv2Iface::KExiv2::ORIENTATION_ROT_90:
-                    preview = preview.transformed(QMatrix().rotate(90));
+                    preview = preview.transformed(QTransform().rotate(90));
                     break;
                 case KExiv2Iface::KExiv2::ORIENTATION_ROT_90_VFLIP:
                     preview = preview.mirrored(false,true);
-                    preview = preview.transformed(QMatrix().rotate(90));
+                    preview = preview.transformed(QTransform().rotate(90));
                     break;
                 case KExiv2Iface::KExiv2::ORIENTATION_ROT_270:
-                    preview = preview.transformed(QMatrix().rotate(270));
+                    preview = preview.transformed(QTransform().rotate(270));
                     break;
                 default:
                     break;
