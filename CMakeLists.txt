@@ -14,6 +14,7 @@ include(FeatureSummary)
 
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Gui)
 find_package(KF5 REQUIRED COMPONENTS KIO)
+find_package(KF5 REQUIRED COMPONENTS Archive)
 
 add_definitions(-DQT_USE_QSTRINGBUILDER)
 
@@ -39,5 +40,7 @@ ecm_optional_add_subdirectory(ps)
 if(KF5KExiv2_FOUND AND KF5KDcraw_FOUND)
 ecm_optional_add_subdirectory(raw)
 endif()
+
+ecm_optional_add_subdirectory(blend)
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
