@@ -2,7 +2,12 @@
 Type=Service
 Name=Blender files
 Name[ca]=Fitxers del Blender
+Name[de]=Blender-Dateien
+Name[es]=Archivos de Blender
+Name[gl]=Ficheiros de Blender
 Name[nl]=Blender-bestanden
+Name[nn]=Blender-filer
+Name[pt_BR]=Arquivos do Blender
 Name[sv]=Blender-filer
 Name[uk]=Файли Blender
 Name[x-test]=xxBlender filesxx
