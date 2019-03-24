@@ -2,6 +2,7 @@
 Type=Service
 Name=Blender files
 Name[ca]=Fitxers del Blender
+Name[ca@valencia]=Fitxers del Blender
 Name[de]=Blender-Dateien
 Name[es]=Archivos de Blender
 Name[gl]=Ficheiros de Blender
