@@ -13,6 +13,7 @@ Name[pt_BR]=Arquivos do Blender
 Name[sv]=Blender-filer
 Name[uk]=Файли Blender
 Name[x-test]=xxBlender filesxx
+Name[zh_TW]=Blender 檔案
 X-KDE-ServiceTypes=ThumbCreator
 MimeType=application/x-blender;
 X-KDE-Library=blenderthumbnail
