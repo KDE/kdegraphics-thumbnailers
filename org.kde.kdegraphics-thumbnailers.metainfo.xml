@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component type="addon">
+  <id>org.kde.kdegraphics_thumbnailers</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0+</project_license>
+  <extends>org.kde.dolphin.desktop</extends>
+  <extends>org.kde.konqueror.desktop</extends>
+  <extends>org.kde.krusader.desktop</extends>
+  <extends>org.kde.gwenview.desktop</extends>
+  <name>kdegraphics-thumbnailers</name>
+  <summary>Graphics file format thumbnailers for KDE applications</summary>
+  <description>
+    <p>These plugins allow KDE software to create thumbnails for advanced graphic file formats PostScript and Raw.</p>
+  </description>
+  <url type="homepage">https://www.kde.org</url>
+  <url type="bugtracker">https://bugs.kde.org/</url>
+  <project_group>KDE</project_group>
+  <categories>
+    <category>Graphics</category>
+  </categories>
+  <icon type="stock">application-postscript</icon>
+</component>
