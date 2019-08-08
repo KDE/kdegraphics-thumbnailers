@@ -43,4 +43,7 @@ endif()
 
 ecm_optional_add_subdirectory(blend)
 
+install(FILES org.kde.kdegraphics-thumbnailers.appdata.xml
+        DESTINATION ${KDE_INSTALL_METAINFODIR})
+
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
