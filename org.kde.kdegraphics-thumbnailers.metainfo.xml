@@ -14,6 +14,12 @@
   </description>
   <url type="homepage">https://www.kde.org</url>
   <url type="bugtracker">https://bugs.kde.org/</url>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://cdn.kde.org/screenshots/kdegraphics-thumbnailers/kdegraphics-thumbnailers.png</image>
+      <caption>Dolphin with PostScript thumbnail</caption>
+    </screenshot>
+  </screenshots>
   <project_group>KDE</project_group>
   <categories>
     <category>Graphics</category>
