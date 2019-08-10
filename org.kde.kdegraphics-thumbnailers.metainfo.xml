@@ -8,9 +8,27 @@
   <extends>org.kde.krusader.desktop</extends>
   <extends>org.kde.gwenview.desktop</extends>
   <name>kdegraphics-thumbnailers</name>
+  <name xml:lang="ca">kdegraphics-thumbnailers</name>
+  <name xml:lang="de">kdegraphics-thumbnailers</name>
+  <name xml:lang="pt">kdegraphics-thumbnailers</name>
+  <name xml:lang="sv">KDE-grafik miniatyrbilder</name>
+  <name xml:lang="uk">kdegraphics-thumbnailers</name>
+  <name xml:lang="x-test">xxkdegraphics-thumbnailersxx</name>
   <summary>Graphics file format thumbnailers for KDE applications</summary>
+  <summary xml:lang="ca">Miniatures per als formats de fitxer de gràfics per a les aplicacions KDE</summary>
+  <summary xml:lang="de">Vorschaubilder von grafischen Dateiformaten für KDE-Anwendungen</summary>
+  <summary xml:lang="pt">Miniaturas de formatos de ficheiros gráficos para as aplicações do KDE</summary>
+  <summary xml:lang="sv">Miniatyrbilder för grafikfilformat för KDE-program</summary>
+  <summary xml:lang="uk">Засоби створення мініатюр вмісту файлів із графікою для програм KDE</summary>
+  <summary xml:lang="x-test">xxGraphics file format thumbnailers for KDE applicationsxx</summary>
   <description>
     <p>These plugins allow KDE software to create thumbnails for advanced graphic file formats PostScript and Raw.</p>
+    <p xml:lang="ca">Aquests connectors permeten que el programari KDE creï miniatures per als formats de fitxer de gràfics avançats PostScript i RAW.</p>
+    <p xml:lang="de">Mit diesem Modul können KDE-Anwendungen Vorschaubilder für die Grafikformate PostScript und Raw erstellen.</p>
+    <p xml:lang="pt">Estes 'plugins' permitem às aplicações do KDE criarem miniaturas de formatos de ficheiros gráficos avançados, como o PostScript e o RAW.</p>
+    <p xml:lang="sv">Insticksprogrammen låter KDE-programvara skapa miniatyrbilder för de avancerade grafikformaten Postscript och obehandlade filer.</p>
+    <p xml:lang="uk">Ці додатки уможливлюють створення мініатюр вмісту для файлів графічних даних, зокрема PostScript та цифрових негативів (RAW), у програмах KDE.</p>
+    <p xml:lang="x-test">xxThese plugins allow KDE software to create thumbnails for advanced graphic file formats PostScript and Raw.xx</p>
   </description>
   <url type="homepage">https://www.kde.org</url>
   <url type="bugtracker">https://bugs.kde.org/</url>
