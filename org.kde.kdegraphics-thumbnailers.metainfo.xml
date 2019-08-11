@@ -36,6 +36,9 @@
     <screenshot type="default">
       <image>https://cdn.kde.org/screenshots/kdegraphics-thumbnailers/kdegraphics-thumbnailers.png</image>
       <caption>Dolphin with PostScript thumbnail</caption>
+      <caption xml:lang="ca">Dolphin amb miniatures PostScript</caption>
+      <caption xml:lang="uk">Dolphin із мініатюрою файла PostScript</caption>
+      <caption xml:lang="x-test">xxDolphin with PostScript thumbnailxx</caption>
     </screenshot>
   </screenshots>
   <project_group>KDE</project_group>
