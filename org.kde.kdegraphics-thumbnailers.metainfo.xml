@@ -20,6 +20,7 @@
   <name xml:lang="pl">kdegraphics-thumbnailers</name>
   <name xml:lang="pt">kdegraphics-thumbnailers</name>
   <name xml:lang="pt-BR">kdegraphics-thumbnailers</name>
+  <name xml:lang="sk">kdegraphics-thumbnailers</name>
   <name xml:lang="sv">KDE-grafik miniatyrbilder</name>
   <name xml:lang="uk">kdegraphics-thumbnailers</name>
   <name xml:lang="x-test">xxkdegraphics-thumbnailersxx</name>
@@ -74,6 +75,7 @@
       <caption xml:lang="pl">Dolphin z miniaturami PostScript</caption>
       <caption xml:lang="pt">O Dolphin com uma miniatura de PostScript</caption>
       <caption xml:lang="pt-BR">O Dolphin com miniatura de PostScript</caption>
+      <caption xml:lang="sk">Dolphin s miniatúrou PostScript</caption>
       <caption xml:lang="sv">Dolphin med miniatyrbild för Postscript</caption>
       <caption xml:lang="uk">Dolphin із мініатюрою файла PostScript</caption>
       <caption xml:lang="x-test">xxDolphin with PostScript thumbnailxx</caption>
