@@ -13,6 +13,7 @@
   <name xml:lang="el">kdegraphics-thumbnailers</name>
   <name xml:lang="en-GB">kdegraphics-thumbnailers</name>
   <name xml:lang="es">kdegraphics-thumbnailers</name>
+  <name xml:lang="eu">kdegraphics-koadro-txiki-egileak</name>
   <name xml:lang="fr">kdegraphics-thumbnailers</name>
   <name xml:lang="it">kdegraphics-thumbnailers</name>
   <name xml:lang="nl">kdegraphics-thumbnailers</name>
@@ -30,6 +31,7 @@
   <summary xml:lang="el">Εικόνες επισκόπησης tvn τύπων αποθήκευσης αρχείων γραφικών για τις εφαρmογές του KDE</summary>
   <summary xml:lang="en-GB">Graphics file format thumbnailers for KDE applications</summary>
   <summary xml:lang="es">Generadores de miniaturas de formatos gráficos para aplicaciones de KDE</summary>
+  <summary xml:lang="eu">KDE aplikazioetarako formatu grafikoen koadro-txiki egilea</summary>
   <summary xml:lang="fr">Créateurs de vignettes de fichiers au format graphique pour les applications KDE</summary>
   <summary xml:lang="it">Generatori di miniature dei file di formati grafici per le applicazioni di KDE</summary>
   <summary xml:lang="nl">Grafisch bestandsformaat van miniaturen voor KDE toepassingen</summary>
@@ -47,6 +49,7 @@
     <p xml:lang="el">Αυτά τα πρόσθετα επιτρέπουν στο λογισμικό του KDE να δημιουργεί εικόνες επισκόπησης για προηγμένους τύπους αποθήκευσης αρχείων PostScript και Raw.</p>
     <p xml:lang="en-GB">These plugins allow KDE software to create thumbnails for advanced graphic file formats PostScript and Raw.</p>
     <p xml:lang="es">Estos complementos permiten a las aplicaciones de KDE crear miniaturas de los formatos de archivos gráficos avanzados PostScript y Raw.</p>
+    <p xml:lang="eu">Plugin honek KDE softwareari PostScript eta Raw formatu grafiko aurreratuen koadro-txikiak sortzen laguntzen dio.</p>
     <p xml:lang="fr">Ces modules externes permettent aux logiciels KDE de créer des vignettes pour les formats de fichiers graphiques avancés PostScript et Raw.</p>
     <p xml:lang="it">Queste estensioni permettono al software di KDE di creare le miniature dei formati di file grafici avanzati PostScript e Raw.</p>
     <p xml:lang="nl">Deze plug-ins bieden KDE software om miniaturen aan te maken voor geavanceerde grafische bestandsformaten PostScript en Raw.</p>
@@ -69,6 +72,7 @@
       <caption xml:lang="el">Το Dolphin με εικόνα επισκόπησης PostScript</caption>
       <caption xml:lang="en-GB">Dolphin with PostScript thumbnail</caption>
       <caption xml:lang="es">Dolphin con miniaturas de PostScript</caption>
+      <caption xml:lang="eu">Dolphin PostScript baten koadro-txiki batekin</caption>
       <caption xml:lang="it">Dolphin con le miniature PostScript</caption>
       <caption xml:lang="nl">Dolphin met PostScript-miniatuur</caption>
       <caption xml:lang="nn">Dolphin med miniatyrbilete for PostScript-fil</caption>
