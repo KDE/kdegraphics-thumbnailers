@@ -26,6 +26,7 @@
   <name xml:lang="sv">KDE-grafik miniatyrbilder</name>
   <name xml:lang="uk">kdegraphics-thumbnailers</name>
   <name xml:lang="x-test">xxkdegraphics-thumbnailersxx</name>
+  <name xml:lang="zh-TW">kdegraphics-thumbnailers</name>
   <summary>Graphics file format thumbnailers for KDE applications</summary>
   <summary xml:lang="ca">Miniatures per als formats de fitxer de gràfics per a les aplicacions KDE</summary>
   <summary xml:lang="de">Vorschaubilder von grafischen Dateiformaten für KDE-Anwendungen</summary>
@@ -44,6 +45,7 @@
   <summary xml:lang="sv">Miniatyrbilder för grafikfilformat för KDE-program</summary>
   <summary xml:lang="uk">Засоби створення мініатюр вмісту файлів із графікою для програм KDE</summary>
   <summary xml:lang="x-test">xxGraphics file format thumbnailers for KDE applicationsxx</summary>
+  <summary xml:lang="zh-TW">適用於 KDE 應用程式的圖形檔案格式縮圖產生工具</summary>
   <description>
     <p>These plugins allow KDE software to create thumbnails for advanced graphic file formats PostScript and Raw.</p>
     <p xml:lang="ca">Aquests connectors permeten que el programari KDE creï miniatures per als formats de fitxer de gràfics avançats PostScript i RAW.</p>
@@ -63,6 +65,7 @@
     <p xml:lang="sv">Insticksprogrammen låter KDE-programvara skapa miniatyrbilder för de avancerade grafikformaten Postscript och obehandlade filer.</p>
     <p xml:lang="uk">Ці додатки уможливлюють створення мініатюр вмісту для файлів графічних даних, зокрема PostScript та цифрових негативів (RAW), у програмах KDE.</p>
     <p xml:lang="x-test">xxThese plugins allow KDE software to create thumbnails for advanced graphic file formats PostScript and Raw.xx</p>
+    <p xml:lang="zh-TW">這些外掛程式讓 KDE 應用程式能建立進階圖形檔案格式 (PostScript 及 Raw) 的縮圖。</p>
   </description>
   <url type="homepage">https://www.kde.org</url>
   <url type="bugtracker">https://bugs.kde.org/</url>
@@ -88,6 +91,7 @@
       <caption xml:lang="sv">Dolphin med miniatyrbild för Postscript</caption>
       <caption xml:lang="uk">Dolphin із мініатюрою файла PostScript</caption>
       <caption xml:lang="x-test">xxDolphin with PostScript thumbnailxx</caption>
+      <caption xml:lang="zh-TW">Dolphin 和 PostScript 縮圖</caption>
     </screenshot>
   </screenshots>
   <project_group>KDE</project_group>
