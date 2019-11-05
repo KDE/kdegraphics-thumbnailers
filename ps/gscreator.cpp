@@ -476,7 +476,7 @@ bool GSCreator::create(const QString &path, int width, int height, QImage &img)
 
 ThumbCreator::Flags GSCreator::flags() const
 {
-    return static_cast<Flags>(DrawFrame);
+    return static_cast<Flags>(None);
 }
 
 void GSCreator::comment(Name name)
