@@ -278,6 +278,7 @@ bool GSCreator::create(const QString &path, int width, int height, QImage &img)
       const int xscale = bbox->width() / width;
       const int yscale = bbox->height() / height;
       const int scale = xscale < yscale ? xscale : yscale;
+      if (scale == 0) break;
       if (getEPSIPreview(path,
                          dsc.beginpreview(),
                          dsc.endpreview(),
