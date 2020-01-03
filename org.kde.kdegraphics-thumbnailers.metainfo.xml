@@ -45,6 +45,7 @@
   <summary xml:lang="pl">Twórcy miniatur dla plików graficznych dla aplikacji KDE</summary>
   <summary xml:lang="pt">Miniaturas de formatos de ficheiros gráficos para as aplicações do KDE</summary>
   <summary xml:lang="pt-BR">Miniaturas de formatos de arquivo gráficos para os aplicativos do KDE</summary>
+  <summary xml:lang="sk">Miniatúry formátov grafických súborov pre aplikácie KDE</summary>
   <summary xml:lang="sv">Miniatyrbilder för grafikfilformat för KDE-program</summary>
   <summary xml:lang="uk">Засоби створення мініатюр вмісту файлів із графікою для програм KDE</summary>
   <summary xml:lang="x-test">xxGraphics file format thumbnailers for KDE applicationsxx</summary>
@@ -67,6 +68,7 @@
     <p xml:lang="pl">Te wtyczki umożliwiają oprogramowaniu KDE tworzenie miniatur dla zaawansowanych formatów graficznych PostScript oraz Raw.</p>
     <p xml:lang="pt">Estes 'plugins' permitem às aplicações do KDE criarem miniaturas de formatos de ficheiros gráficos avançados, como o PostScript e o RAW.</p>
     <p xml:lang="pt-BR">Estes plugins permitem aos aplicativos do KDE criarem miniaturas de formatos de arquivo gráficos avançados, como PostScript e RAW.</p>
+    <p xml:lang="sk">Tieto doplnky umožňujú softvéru KDE vytvárať miniatúry pre pokročilé formáty grafických súborov PostScript a Raw.</p>
     <p xml:lang="sv">Insticksprogrammen låter KDE-programvara skapa miniatyrbilder för de avancerade grafikformaten Postscript och obehandlade filer.</p>
     <p xml:lang="uk">Ці додатки уможливлюють створення мініатюр вмісту для файлів графічних даних, зокрема PostScript та цифрових негативів (RAW), у програмах KDE.</p>
     <p xml:lang="x-test">xxThese plugins allow KDE software to create thumbnails for advanced graphic file formats PostScript and Raw.xx</p>
