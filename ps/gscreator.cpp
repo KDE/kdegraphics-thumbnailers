@@ -350,7 +350,7 @@ bool GSCreator::create(const QString &path, int width, int height, QImage &img)
 	dup2( dvipipe[1], STDOUT_FILENO);
 
 	execvp(dvipsargs[0], const_cast<char *const *>(dvipsargs));
-	exit(1);
+	_exit(1);
       }
       else if(pid_two != -1){
 	close(input[1]);
@@ -361,7 +361,7 @@ bool GSCreator::create(const QString &path, int width, int height, QImage &img)
 	dup2( output[1], STDOUT_FILENO);
 
 	execvp(gsargs[0], const_cast<char *const *>(gsargs));
-	exit(1);
+	_exit(1);
       }
       else{
 	// fork() (2) failed, close these
@@ -379,7 +379,7 @@ bool GSCreator::create(const QString &path, int width, int height, QImage &img)
       dup2(output[1], STDOUT_FILENO);
 
       execvp(gsargs[0], const_cast<char *const *>(gsargs));
-      exit(1);
+      _exit(1);
     }
   }
   else if (pid != -1) {
