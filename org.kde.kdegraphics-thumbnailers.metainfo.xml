@@ -24,6 +24,7 @@
   <name xml:lang="pl">kdegraphics-thumbnailers</name>
   <name xml:lang="pt">kdegraphics-thumbnailers</name>
   <name xml:lang="pt-BR">kdegraphics-thumbnailers</name>
+  <name xml:lang="ru">kdegraphics-thumbnailers</name>
   <name xml:lang="sk">kdegraphics-thumbnailers</name>
   <name xml:lang="sv">KDE-grafik miniatyrbilder</name>
   <name xml:lang="uk">kdegraphics-thumbnailers</name>
@@ -47,6 +48,7 @@
   <summary xml:lang="pl">Twórcy miniatur dla plików graficznych dla aplikacji KDE</summary>
   <summary xml:lang="pt">Miniaturas de formatos de ficheiros gráficos para as aplicações do KDE</summary>
   <summary xml:lang="pt-BR">Miniaturas de formatos de arquivo gráficos para os aplicativos do KDE</summary>
+  <summary xml:lang="ru">Создание миниатюр графических файлов для приложений KDE</summary>
   <summary xml:lang="sk">Miniatúry formátov grafických súborov pre aplikácie KDE</summary>
   <summary xml:lang="sv">Miniatyrbilder för grafikfilformat för KDE-program</summary>
   <summary xml:lang="uk">Засоби створення мініатюр вмісту файлів із графікою для програм KDE</summary>
@@ -71,6 +73,7 @@
     <p xml:lang="pl">Te wtyczki umożliwiają oprogramowaniu KDE tworzenie miniatur dla zaawansowanych formatów graficznych PostScript oraz Raw.</p>
     <p xml:lang="pt">Estes 'plugins' permitem às aplicações do KDE criarem miniaturas de formatos de ficheiros gráficos avançados, como o PostScript e o RAW.</p>
     <p xml:lang="pt-BR">Estes plugins permitem aos aplicativos do KDE criarem miniaturas de formatos de arquivo gráficos avançados, como PostScript e RAW.</p>
+    <p xml:lang="ru">Эти подключаемые модули служат для создания миниатюр файлов форматов PostScript и RAW в приложениях KDE.</p>
     <p xml:lang="sk">Tieto doplnky umožňujú softvéru KDE vytvárať miniatúry pre pokročilé formáty grafických súborov PostScript a Raw.</p>
     <p xml:lang="sv">Insticksprogrammen låter KDE-programvara skapa miniatyrbilder för de avancerade grafikformaten Postscript och obehandlade filer.</p>
     <p xml:lang="uk">Ці додатки уможливлюють створення мініатюр вмісту для файлів графічних даних, зокрема PostScript та цифрових негативів (RAW), у програмах KDE.</p>
@@ -100,6 +103,7 @@
       <caption xml:lang="pl">Dolphin z miniaturami PostScript</caption>
       <caption xml:lang="pt">O Dolphin com uma miniatura de PostScript</caption>
       <caption xml:lang="pt-BR">O Dolphin com miniatura de PostScript</caption>
+      <caption xml:lang="ru">Миниатюра файла в формате PostScript в диспетчере файлов Dolphin</caption>
       <caption xml:lang="sk">Dolphin s miniatúrou PostScript</caption>
       <caption xml:lang="sv">Dolphin med miniatyrbild för Postscript</caption>
       <caption xml:lang="uk">Dolphin із мініатюрою файла PostScript</caption>
