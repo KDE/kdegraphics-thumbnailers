@@ -9,6 +9,7 @@
   <extends>org.kde.gwenview.desktop</extends>
   <name>kdegraphics-thumbnailers</name>
   <name xml:lang="ca">kdegraphics-thumbnailers</name>
+  <name xml:lang="ca-valencia">kdegraphics-thumbnailers</name>
   <name xml:lang="de">kdegraphics-thumbnailers</name>
   <name xml:lang="el">kdegraphics-thumbnailers</name>
   <name xml:lang="en-GB">kdegraphics-thumbnailers</name>
@@ -17,6 +18,7 @@
   <name xml:lang="eu">kdegraphics-koadro-txiki-egileak</name>
   <name xml:lang="fi">kdegraphics-thumbnailers</name>
   <name xml:lang="fr">kdegraphics-thumbnailers</name>
+  <name xml:lang="ia">kdegraphics-thumbnailers</name>
   <name xml:lang="it">kdegraphics-thumbnailers</name>
   <name xml:lang="ko">kdegraphics-thumbnailers</name>
   <name xml:lang="nl">kdegraphics-thumbnailers</name>
@@ -32,6 +34,7 @@
   <name xml:lang="zh-TW">kdegraphics-thumbnailers</name>
   <summary>Graphics file format thumbnailers for KDE applications</summary>
   <summary xml:lang="ca">Miniatures per als formats de fitxer de gràfics per a les aplicacions KDE</summary>
+  <summary xml:lang="ca-valencia">Miniatures per als formats de fitxer de gràfics per a les aplicacions KDE</summary>
   <summary xml:lang="de">Vorschaubilder von grafischen Dateiformaten für KDE-Anwendungen</summary>
   <summary xml:lang="el">Εικόνες επισκόπησης tvn τύπων αποθήκευσης αρχείων γραφικών για τις εφαρmογές του KDE</summary>
   <summary xml:lang="en-GB">Graphics file format thumbnailers for KDE applications</summary>
@@ -40,6 +43,7 @@
   <summary xml:lang="eu">KDE aplikazioetarako formatu grafikoen koadro-txiki egilea</summary>
   <summary xml:lang="fi">Luo grafiikkatiedostoista pienoiskuvat KDE-sovelluksiin</summary>
   <summary xml:lang="fr">Créateurs de vignettes de fichiers au format graphique pour les applications KDE</summary>
+  <summary xml:lang="ia">Formato de file graphic thumbnailers (de miniaturas) per applicationes de KDE</summary>
   <summary xml:lang="it">Generatori di miniature dei file di formati grafici per le applicazioni di KDE</summary>
   <summary xml:lang="ko">KDE 프로그램의 그래픽 파일 미리 보기 도구</summary>
   <summary xml:lang="nl">Grafisch bestandsformaat van miniaturen voor KDE toepassingen</summary>
@@ -56,6 +60,7 @@
   <description>
     <p>These plugins allow KDE software to create thumbnails for advanced graphic file formats PostScript and Raw.</p>
     <p xml:lang="ca">Aquests connectors permeten que el programari KDE creï miniatures per als formats de fitxer de gràfics avançats PostScript i RAW.</p>
+    <p xml:lang="ca-valencia">Aquests connectors permeten que el programari KDE cree miniatures per als formats de fitxer de gràfics avançats PostScript i RAW.</p>
     <p xml:lang="de">Mit diesem Modul können KDE-Anwendungen Vorschaubilder für die Grafikformate PostScript und Raw erstellen.</p>
     <p xml:lang="el">Αυτά τα πρόσθετα επιτρέπουν στο λογισμικό του KDE να δημιουργεί εικόνες επισκόπησης για προηγμένους τύπους αποθήκευσης αρχείων PostScript και Raw.</p>
     <p xml:lang="en-GB">These plugins allow KDE software to create thumbnails for advanced graphic file formats PostScript and Raw.</p>
@@ -64,6 +69,7 @@
     <p xml:lang="eu">Plugin honek KDE softwareari PostScript eta Raw formatu grafiko aurreratuen koadro-txikiak sortzen laguntzen dio.</p>
     <p xml:lang="fi">Näillä liitännäisillä KDE-sovellukset luovat pienoiskuvia edistyneistä kuvatiedostomuodoista (PostScript ja Raw).</p>
     <p xml:lang="fr">Ces modules externes permettent aux logiciels KDE de créer des vignettes pour les formats de fichiers graphiques avancés PostScript et Raw.</p>
+    <p xml:lang="ia">Iste plugins permitte a software de KDE de crear thumbnails (miniaturas) per formatos de file graphic avantiate PostScript e Raw.</p>
     <p xml:lang="it">Queste estensioni permettono al software di KDE di creare le miniature dei formati di file grafici avanzati PostScript e Raw.</p>
     <p xml:lang="ko">이 플러그인을 사용하여 KDE 프로그램에서 포스트스크립트나 RAW와 같은 복잡한 그래픽 파일 형식의 미리 보기 그림을 만들 수 있습니다.</p>
     <p xml:lang="nl">Deze plug-ins bieden KDE software om miniaturen aan te maken voor geavanceerde grafische bestandsformaten PostScript en Raw.</p>
@@ -85,6 +91,7 @@
       <image>https://cdn.kde.org/screenshots/kdegraphics-thumbnailers/kdegraphics-thumbnailers.png</image>
       <caption>Dolphin with PostScript thumbnail</caption>
       <caption xml:lang="ca">Dolphin amb miniatures PostScript</caption>
+      <caption xml:lang="ca-valencia">Dolphin amb miniatures PostScript</caption>
       <caption xml:lang="de">Dolphin mit der Vorschau einer PostScript-Datei</caption>
       <caption xml:lang="el">Το Dolphin με εικόνα επισκόπησης PostScript</caption>
       <caption xml:lang="en-GB">Dolphin with PostScript thumbnail</caption>
@@ -93,6 +100,7 @@
       <caption xml:lang="eu">Dolphin PostScript baten koadro-txiki batekin</caption>
       <caption xml:lang="fi">PostScript-pienoiskuva Dolphinissa</caption>
       <caption xml:lang="fr">Dolphin avec une vignette PostScript</caption>
+      <caption xml:lang="ia">Dolphin con thumbnai (miniatura) PostScript</caption>
       <caption xml:lang="it">Dolphin con le miniature PostScript</caption>
       <caption xml:lang="ko">포스트스크립트 미리 보기가 표시된 Dolphin</caption>
       <caption xml:lang="nl">Dolphin met PostScript-miniatuur</caption>
