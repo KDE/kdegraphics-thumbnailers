@@ -9,6 +9,7 @@
   <extends>org.kde.gwenview.desktop</extends>
   <name>kdegraphics-thumbnailers</name>
   <name xml:lang="ca">kdegraphics-thumbnailers</name>
+  <name xml:lang="ca-valencia">kdegraphics-thumbnailers</name>
   <name xml:lang="de">kdegraphics-thumbnailers</name>
   <name xml:lang="el">kdegraphics-thumbnailers</name>
   <name xml:lang="en-GB">kdegraphics-thumbnailers</name>
@@ -33,6 +34,7 @@
   <name xml:lang="zh-TW">kdegraphics-thumbnailers</name>
   <summary>Graphics file format thumbnailers for KDE applications</summary>
   <summary xml:lang="ca">Miniatures per als formats de fitxer de gràfics per a les aplicacions KDE</summary>
+  <summary xml:lang="ca-valencia">Miniatures per als formats de fitxer de gràfics per a les aplicacions KDE</summary>
   <summary xml:lang="de">Vorschaubilder von grafischen Dateiformaten für KDE-Anwendungen</summary>
   <summary xml:lang="el">Εικόνες επισκόπησης tvn τύπων αποθήκευσης αρχείων γραφικών για τις εφαρmογές του KDE</summary>
   <summary xml:lang="en-GB">Graphics file format thumbnailers for KDE applications</summary>
@@ -58,6 +60,7 @@
   <description>
     <p>These plugins allow KDE software to create thumbnails for advanced graphic file formats PostScript and Raw.</p>
     <p xml:lang="ca">Aquests connectors permeten que el programari KDE creï miniatures per als formats de fitxer de gràfics avançats PostScript i RAW.</p>
+    <p xml:lang="ca-valencia">Aquests connectors permeten que el programari KDE cree miniatures per als formats de fitxer de gràfics avançats PostScript i RAW.</p>
     <p xml:lang="de">Mit diesem Modul können KDE-Anwendungen Vorschaubilder für die Grafikformate PostScript und Raw erstellen.</p>
     <p xml:lang="el">Αυτά τα πρόσθετα επιτρέπουν στο λογισμικό του KDE να δημιουργεί εικόνες επισκόπησης για προηγμένους τύπους αποθήκευσης αρχείων PostScript και Raw.</p>
     <p xml:lang="en-GB">These plugins allow KDE software to create thumbnails for advanced graphic file formats PostScript and Raw.</p>
@@ -88,6 +91,7 @@
       <image>https://cdn.kde.org/screenshots/kdegraphics-thumbnailers/kdegraphics-thumbnailers.png</image>
       <caption>Dolphin with PostScript thumbnail</caption>
       <caption xml:lang="ca">Dolphin amb miniatures PostScript</caption>
+      <caption xml:lang="ca-valencia">Dolphin amb miniatures PostScript</caption>
       <caption xml:lang="de">Dolphin mit der Vorschau einer PostScript-Datei</caption>
       <caption xml:lang="el">Το Dolphin με εικόνα επισκόπησης PostScript</caption>
       <caption xml:lang="en-GB">Dolphin with PostScript thumbnail</caption>
