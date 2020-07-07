@@ -18,6 +18,7 @@
   <name xml:lang="eu">kdegraphics-koadro-txiki-egileak</name>
   <name xml:lang="fi">kdegraphics-thumbnailers</name>
   <name xml:lang="fr">kdegraphics-thumbnailers</name>
+  <name xml:lang="gl">kdegraphics-thumbnailers</name>
   <name xml:lang="ia">kdegraphics-thumbnailers</name>
   <name xml:lang="it">kdegraphics-thumbnailers</name>
   <name xml:lang="ko">kdegraphics-thumbnailers</name>
@@ -44,6 +45,7 @@
   <summary xml:lang="eu">KDE aplikazioetarako formatu grafikoen koadro-txiki egilea</summary>
   <summary xml:lang="fi">Luo grafiikkatiedostoista pienoiskuvat KDE-sovelluksiin</summary>
   <summary xml:lang="fr">Créateurs de vignettes de fichiers au format graphique pour les applications KDE</summary>
+  <summary xml:lang="gl">Miniaturizadores para formatos de ficheiro gráficos para aplicacións de KDE</summary>
   <summary xml:lang="ia">Formato de file graphic thumbnailers (de miniaturas) per applicationes de KDE</summary>
   <summary xml:lang="it">Generatori di miniature dei file di formati grafici per le applicazioni di KDE</summary>
   <summary xml:lang="ko">KDE 프로그램의 그래픽 파일 미리 보기 도구</summary>
@@ -71,6 +73,7 @@
     <p xml:lang="eu">Plugin honek KDE softwareari PostScript eta Raw formatu grafiko aurreratuen koadro-txikiak sortzen laguntzen dio.</p>
     <p xml:lang="fi">Näillä liitännäisillä KDE-sovellukset luovat pienoiskuvia edistyneistä kuvatiedostomuodoista (PostScript ja Raw).</p>
     <p xml:lang="fr">Ces modules externes permettent aux logiciels KDE de créer des vignettes pour les formats de fichiers graphiques avancés PostScript et Raw.</p>
+    <p xml:lang="gl">Estes complementos permiten aos programas de KDE crear miniaturas para os formatos de ficheiro gráficos avanzados PostScript e cru.</p>
     <p xml:lang="ia">Iste plugins permitte a software de KDE de crear thumbnails (miniaturas) per formatos de file graphic avantiate PostScript e Raw.</p>
     <p xml:lang="it">Queste estensioni permettono al software di KDE di creare le miniature dei formati di file grafici avanzati PostScript e Raw.</p>
     <p xml:lang="ko">이 플러그인을 사용하여 KDE 프로그램에서 포스트스크립트나 RAW와 같은 복잡한 그래픽 파일 형식의 미리 보기 그림을 만들 수 있습니다.</p>
@@ -103,6 +106,7 @@
       <caption xml:lang="eu">Dolphin PostScript baten koadro-txiki batekin</caption>
       <caption xml:lang="fi">PostScript-pienoiskuva Dolphinissa</caption>
       <caption xml:lang="fr">Dolphin avec une vignette PostScript</caption>
+      <caption xml:lang="gl">Dolphin cunha miniatura de PostScript</caption>
       <caption xml:lang="ia">Dolphin con thumbnai (miniatura) PostScript</caption>
       <caption xml:lang="it">Dolphin con le miniature PostScript</caption>
       <caption xml:lang="ko">포스트스크립트 미리 보기가 표시된 Dolphin</caption>
