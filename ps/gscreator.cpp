@@ -68,10 +68,10 @@
 #include <fcntl.h>
 #include <errno.h>
 
-#include <qcolor.h>
-#include <qfile.h>
-#include <qimage.h>
-#include <qregexp.h>
+#include <QColor>
+#include <QFile>
+#include <QImage>
+#include <QRegExp>
 #include <QVector>
 
 

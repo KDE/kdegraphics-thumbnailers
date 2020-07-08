@@ -23,8 +23,8 @@
 #include <map>
 #include <memory>
 
-#include <qsize.h>
-#include <qstring.h>
+#include <QSize>
+#include <QString>
 
 #include "dscparse.h"
 
