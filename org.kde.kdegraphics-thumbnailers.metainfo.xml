@@ -99,8 +99,8 @@
     <screenshot type="default">
       <image>https://cdn.kde.org/screenshots/kdegraphics-thumbnailers/kdegraphics-thumbnailers.png</image>
       <caption>Dolphin with PostScript thumbnail</caption>
-      <caption xml:lang="ca">Dolphin amb miniatures PostScript</caption>
-      <caption xml:lang="ca-valencia">Dolphin amb miniatures PostScript</caption>
+      <caption xml:lang="ca">El Dolphin amb miniatures PostScript</caption>
+      <caption xml:lang="ca-valencia">El Dolphin amb miniatures PostScript</caption>
       <caption xml:lang="de">Dolphin mit der Vorschau einer PostScript-Datei</caption>
       <caption xml:lang="el">Το Dolphin με εικόνα επισκόπησης PostScript</caption>
       <caption xml:lang="en-GB">Dolphin with PostScript thumbnail</caption>
