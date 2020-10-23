@@ -76,7 +76,6 @@
 
 
 #include "gscreator.h"
-#include "dscparse_adapter.h"
 #include "dscparse.h"
 
 extern "C"
