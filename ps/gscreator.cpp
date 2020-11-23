@@ -71,7 +71,6 @@
 #include <QColor>
 #include <QFile>
 #include <QImage>
-#include <QRegExp>
 #include <QVector>
 
 
@@ -234,11 +233,13 @@ bool GSCreator::create(const QString &path, int width, int height, QImage &img)
 
   std::auto_ptr<KDSCBBOX> bbox = dsc.bbox();
 
-  const bool is_encapsulated = no_dvi &&
-    (path.indexOf(QRegExp("\\.epsi?$", Qt::CaseInsensitive)) > 0) &&
-     bbox.get() != nullptr &&
-    (bbox->width() > 0) && (bbox->height() > 0) &&
-    (dsc.page_count() <= 1);
+  const bool is_encapsulated = no_dvi
+    && (path.endsWith(QLatin1String(".eps"), Qt::CaseInsensitive)
+        || path.endsWith(QLatin1String(".epsi"), Qt::CaseInsensitive))
+    && bbox.get() != nullptr
+    && (bbox->width() > 0)
+    && (bbox->height() > 0)
+    && (dsc.page_count() <= 1);
 
   char translation[64] = "";
   char pagesize[32] = "";
