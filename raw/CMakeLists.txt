@@ -9,7 +9,7 @@ add_library(rawthumbnail MODULE ${rawthumbnail_SRCS})
 target_link_libraries(rawthumbnail Qt5::Gui KF5::KIOWidgets KF5::KDcraw KF5::KExiv2)
 
 ## install the plugin
-install(TARGETS rawthumbnail DESTINATION ${PLUGIN_INSTALL_DIR})
+install(TARGETS rawthumbnail DESTINATION ${KDE_INSTALL_PLUGINDIR})
 install(FILES rawthumbnail.desktop DESTINATION ${SERVICES_INSTALL_DIR})
 
 
