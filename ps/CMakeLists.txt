@@ -1,17 +1,16 @@
-########### next target ###############
+add_library(gsthumbnail MODULE)
 
-set(gsthumbnail_PART_SRCS gscreator.cpp dscparse.cpp dscparse_adapter.cpp)
+target_sources(gsthumbnail PRIVATE
+    gscreator.cpp
+    dscparse.cpp
+    dscparse_adapter.cpp
+)
 
-
-add_library(gsthumbnail MODULE ${gsthumbnail_PART_SRCS})
-
-
-target_link_libraries(gsthumbnail  Qt5::Gui KF5::KIOWidgets )
+target_link_libraries(gsthumbnail
+    KF5::KIOWidgets
+    Qt5::Gui
+)
 
 install(TARGETS gsthumbnail  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
-
-
-########### install files ###############
-
-install( FILES gsthumbnail.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
+install(FILES gsthumbnail.desktop  DESTINATION  ${SERVICES_INSTALL_DIR})
 

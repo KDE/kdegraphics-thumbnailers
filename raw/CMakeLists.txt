@@ -1,12 +1,17 @@
-project(rawthumbnail)
+add_library(rawthumbnail MODULE)
 
 #sources
-set(rawthumbnail_SRCS rawcreator.cpp)
-add_library(rawthumbnail MODULE ${rawthumbnail_SRCS})
-
+target_sources(rawthumbnail PRIVATE
+    rawcreator.cpp
+)
 
 ## includes and linking
-target_link_libraries(rawthumbnail Qt5::Gui KF5::KIOWidgets KF5::KDcraw KF5::KExiv2)
+target_link_libraries(rawthumbnail
+    KF5::KIOWidgets
+    KF5::KDcraw
+    KF5::KExiv2
+    Qt5::Gui
+)
 
 ## install the plugin
 install(TARGETS rawthumbnail DESTINATION ${KDE_INSTALL_PLUGINDIR})

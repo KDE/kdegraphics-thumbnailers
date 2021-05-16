@@ -1,11 +1,16 @@
-project(blenderthumbnail)
+add_library(blenderthumbnail MODULE)
 
 #sources
-set(blenderthumbnail_SRCS blendercreator.cpp)
-add_library(blenderthumbnail MODULE ${blenderthumbnail_SRCS})
+target_sources(blenderthumbnail PRIVATE
+    blendercreator.cpp
+)
 
 ## includes and linking
-target_link_libraries(blenderthumbnail Qt5::Core KF5::KIOWidgets KF5::Archive)
+target_link_libraries(blenderthumbnail
+    KF5::KIOWidgets
+    KF5::Archive
+    Qt5::Core
+)
 
 ## install the plugin
 install(TARGETS blenderthumbnail DESTINATION ${KDE_INSTALL_PLUGINDIR})
