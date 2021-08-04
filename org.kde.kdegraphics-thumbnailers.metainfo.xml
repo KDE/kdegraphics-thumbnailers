@@ -67,7 +67,7 @@
   <summary xml:lang="sl">Orodje za pripravo sličic za aplikacije KDE iz grafičnih datotek</summary>
   <summary xml:lang="sv">Miniatyrbilder för grafikfilformat för KDE-program</summary>
   <summary xml:lang="uk">Засоби створення мініатюр вмісту файлів із графікою для програм KDE</summary>
-  <summary xml:lang="vi">Bộ tạo hình nhỏ định dạng tệp đồ hoạ cho các ứng dụng KDE</summary>
+  <summary xml:lang="vi">Bộ tạo hình nhỏ dạng thức tệp đồ hoạ cho các ứng dụng KDE</summary>
   <summary xml:lang="x-test">xxGraphics file format thumbnailers for KDE applicationsxx</summary>
   <summary xml:lang="zh-CN">KDE 应用程序的图形文件缩略图产生器</summary>
   <summary xml:lang="zh-TW">適用於 KDE 應用程式的圖形檔案格式縮圖產生工具</summary>
@@ -100,7 +100,7 @@
     <p xml:lang="sl">Ti vtičniki omogočajo programski opremi KDE, da ustvari sličice iz naprednih grafičnih datotek PostScript in Raw.</p>
     <p xml:lang="sv">Insticksprogrammen låter KDE-programvara skapa miniatyrbilder för de avancerade grafikformaten Postscript och obehandlade filer.</p>
     <p xml:lang="uk">Ці додатки уможливлюють створення мініатюр вмісту для файлів графічних даних, зокрема PostScript та цифрових негативів (RAW), у програмах KDE.</p>
-    <p xml:lang="vi">Những phần cài cắm này cho phép phần mềm KDE tạo ra các hình nhỏ cho các định dạng tệp đồ hoạ nâng cao PostScript và RAW.</p>
+    <p xml:lang="vi">Những phần cài cắm này cho phép phần mềm KDE tạo ra các hình nhỏ cho các dạng thức tệp đồ hoạ nâng cao PostScript và RAW.</p>
     <p xml:lang="x-test">xxThese plugins allow KDE software to create thumbnails for advanced graphic file formats PostScript and Raw.xx</p>
     <p xml:lang="zh-CN">这些插件允许 KDE 软件创建高级图形文件格式 PostScript 和 Raw 的缩略图。</p>
     <p xml:lang="zh-TW">這些外掛程式讓 KDE 應用程式能建立進階圖形檔案格式 (PostScript 及 Raw) 的縮圖。</p>
