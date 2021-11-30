@@ -35,6 +35,14 @@ set_package_properties("KF5KDcraw"    PROPERTIES
                        PURPOSE     "Required to build the RAW thumbnailer"
 )
 
+find_package(QMobipocket)
+set_package_properties("QMobipocket"    PROPERTIES
+                       DESCRIPTION "A library for accessing mobipocket files"
+                       URL         "www.kde.org"
+                       TYPE        OPTIONAL
+                       PURPOSE     "Required to build the mobipocket thumbnailer"
+)
+
 
 ecm_optional_add_subdirectory(ps)
 
@@ -43,6 +51,10 @@ ecm_optional_add_subdirectory(raw)
 endif()
 
 ecm_optional_add_subdirectory(blend)
+
+if(QMobipocket_FOUND)
+ecm_optional_add_subdirectory(mobipocket)
+endif()
 
 install(FILES org.kde.kdegraphics-thumbnailers.metainfo.xml
         DESTINATION ${KDE_INSTALL_METAINFODIR})

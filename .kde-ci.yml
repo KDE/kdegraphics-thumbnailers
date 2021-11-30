@@ -9,3 +9,4 @@ Dependencies:
     'frameworks/karchive': '@stable'
     'graphics/libkexiv2': '@same'
     'graphics/libkdcraw': '@same'
+    'graphics/kdegraphics-mobipocket': '@same'
