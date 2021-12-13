@@ -18,6 +18,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Archive)
 
 add_definitions(-DQT_USE_QSTRINGBUILDER)
 
+option(DISABLE_MOBIPOCKET "Disable the mobipocket thumbnailer." OFF)
 
 find_package(KF5KExiv2)
 set_package_properties("KF5KExiv2"    PROPERTIES
@@ -35,12 +36,20 @@ set_package_properties("KF5KDcraw"    PROPERTIES
                        PURPOSE     "Required to build the RAW thumbnailer"
 )
 
+if (DISABLE_MOBIPOCKET)
+    set(MOBIPOCKET_REQUIRED_TYPE "OPTIONAL")
+    set(DISABLE_MOBIPOCKET_TEXT "")
+else()
+    set(MOBIPOCKET_REQUIRED_TYPE "REQUIRED")
+    set(DISABLE_MOBIPOCKET_TEXT "Disable with DISABLE_MOBIPOCKET")
+endif()
+
 find_package(QMobipocket)
 set_package_properties("QMobipocket"    PROPERTIES
                        DESCRIPTION "A library for accessing mobipocket files"
                        URL         "www.kde.org"
-                       TYPE        OPTIONAL
-                       PURPOSE     "Required to build the mobipocket thumbnailer"
+                       TYPE        ${MOBIPOCKET_REQUIRED_TYPE}
+                       PURPOSE     "Required to build the mobipocket thumbnailer. ${DISABLE_MOBIPOCKET_TEXT}"
 )
 
 
