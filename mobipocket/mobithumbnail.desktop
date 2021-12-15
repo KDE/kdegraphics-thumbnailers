@@ -2,6 +2,8 @@
 Type=Service
 Name=Mobipocket Files
 Name[bg]=Файлове за Mobipocket
+Name[ca]=Fitxers Mobipocket
+Name[ca@valencia]=Fitxers Mobipocket
 Name[da]=Mobipocket-filer
 Name[de]=Mobipocket-Dateien
 Name[en_GB]=Mobipocket Files
@@ -20,6 +22,8 @@ Name[ru]=Электронные книги Mobipocket
 Name[si]=Mobipocket ගොනු
 Name[sv]=Mobipocket-filer
 Name[uk]=Файли Mobipocket
+Name[vi]=Tệp Mobipocket
+Name[x-test]=xxMobipocket Filesxx
 X-KDE-ServiceTypes=ThumbCreator
 MimeType=application/x-mobipocket-ebook;
 X-KDE-Library=mobithumbnail
