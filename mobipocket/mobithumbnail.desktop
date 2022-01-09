@@ -1,6 +1,7 @@
 [Desktop Entry]
 Type=Service
 Name=Mobipocket Files
+Name[ar]=ملفات Mobipocket
 Name[bg]=Файлове за Mobipocket
 Name[ca]=Fitxers Mobipocket
 Name[ca@valencia]=Fitxers Mobipocket
@@ -30,6 +31,7 @@ Name[sv]=Mobipocket-filer
 Name[uk]=Файли Mobipocket
 Name[vi]=Tệp Mobipocket
 Name[x-test]=xxMobipocket Filesxx
+Name[zh_CN]=Mobipocket 文件
 X-KDE-ServiceTypes=ThumbCreator
 MimeType=application/x-mobipocket-ebook;
 X-KDE-Library=mobithumbnail
