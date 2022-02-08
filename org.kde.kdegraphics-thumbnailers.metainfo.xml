@@ -8,6 +8,7 @@
   <extends>org.kde.krusader.desktop</extends>
   <extends>org.kde.gwenview.desktop</extends>
   <name>kdegraphics-thumbnailers</name>
+  <name xml:lang="ar">مصغرات kdegraphics</name>
   <name xml:lang="ca">kdegraphics-thumbnailers</name>
   <name xml:lang="ca-valencia">kdegraphics-thumbnailers</name>
   <name xml:lang="da">kdegraphics-thumbnailers</name>
@@ -40,6 +41,7 @@
   <name xml:lang="zh-CN">kdegraphics-thumbnailers</name>
   <name xml:lang="zh-TW">kdegraphics-thumbnailers</name>
   <summary>Graphics file format thumbnailers for KDE applications</summary>
+  <summary xml:lang="ar">مصغرات لملفات الرسوميات لتطبيقات كدي</summary>
   <summary xml:lang="ca">Miniatures per als formats de fitxer de gràfics per a les aplicacions KDE</summary>
   <summary xml:lang="ca-valencia">Miniatures per als formats de fitxer de gràfics per a les aplicacions KDE</summary>
   <summary xml:lang="da">Miniaturedannelse til grafikfilformater til KDE-programmer</summary>
@@ -73,6 +75,7 @@
   <summary xml:lang="zh-TW">適用於 KDE 應用程式的圖形檔案格式縮圖產生工具</summary>
   <description>
     <p>These plugins allow KDE software to create thumbnails for advanced graphic file formats PostScript and Raw.</p>
+    <p xml:lang="ar">تسمح هذه المكونات الإضافية لبرنامج كدي بإنشاء صور مصغرة لتنسيقات ملفات الرسوم المتقدمة PostScript و Raw.</p>
     <p xml:lang="ca">Aquests connectors permeten que el programari KDE creï miniatures per als formats de fitxer de gràfics avançats PostScript i RAW.</p>
     <p xml:lang="ca-valencia">Aquests connectors permeten que el programari KDE cree miniatures per als formats de fitxer de gràfics avançats PostScript i RAW.</p>
     <p xml:lang="da">Disse plugins lader KDE-software oprette miniaturer af avancerede grafiske filformater såsom PostScript og Raw.</p>
@@ -111,6 +114,7 @@
     <screenshot type="default">
       <image>https://cdn.kde.org/screenshots/kdegraphics-thumbnailers/kdegraphics-thumbnailers.png</image>
       <caption>Dolphin with PostScript thumbnail</caption>
+      <caption xml:lang="ar">دولفين بمصغرة PostScript</caption>
       <caption xml:lang="ca">El Dolphin amb miniatures PostScript</caption>
       <caption xml:lang="ca-valencia">El Dolphin amb miniatures PostScript</caption>
       <caption xml:lang="da">Dolphin med PostScript-miniature</caption>
