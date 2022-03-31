@@ -35,6 +35,7 @@
   <name xml:lang="sk">kdegraphics-thumbnailers</name>
   <name xml:lang="sl">kdegraphics-thumbnailers</name>
   <name xml:lang="sv">KDE-grafik miniatyrbilder</name>
+  <name xml:lang="tr">kdegraphics-thumbnailers</name>
   <name xml:lang="uk">kdegraphics-thumbnailers</name>
   <name xml:lang="vi">kdegraphics-thumbnailers</name>
   <name xml:lang="x-test">xxkdegraphics-thumbnailersxx</name>
@@ -68,6 +69,7 @@
   <summary xml:lang="sk">Miniatúry formátov grafických súborov pre aplikácie KDE</summary>
   <summary xml:lang="sl">Orodje za pripravo sličic za aplikacije KDE iz grafičnih datotek</summary>
   <summary xml:lang="sv">Miniatyrbilder för grafikfilformat för KDE-program</summary>
+  <summary xml:lang="tr">KDE uygulamaları için grafik dosya biçimi küçük resimleri</summary>
   <summary xml:lang="uk">Засоби створення мініатюр вмісту файлів із графікою для програм KDE</summary>
   <summary xml:lang="vi">Bộ tạo hình nhỏ dạng thức tệp đồ hoạ cho các ứng dụng KDE</summary>
   <summary xml:lang="x-test">xxGraphics file format thumbnailers for KDE applicationsxx</summary>
@@ -102,6 +104,7 @@
     <p xml:lang="sk">Tieto doplnky umožňujú softvéru KDE vytvárať miniatúry pre pokročilé formáty grafických súborov PostScript a Raw.</p>
     <p xml:lang="sl">Ti vtičniki omogočajo programski opremi KDE, da ustvari sličice iz naprednih grafičnih datotek PostScript in Raw.</p>
     <p xml:lang="sv">Insticksprogrammen låter KDE-programvara skapa miniatyrbilder för de avancerade grafikformaten Postscript och obehandlade filer.</p>
+    <p xml:lang="tr">Bu eklenti, KDE yazılımlarının Postscript ve RAW dosyaları gibi gelişmiş grafik biçimleri için küçük resimler oluşturmasına izin verir.</p>
     <p xml:lang="uk">Ці додатки уможливлюють створення мініатюр вмісту для файлів графічних даних, зокрема PostScript та цифрових негативів (RAW), у програмах KDE.</p>
     <p xml:lang="vi">Những phần cài cắm này cho phép phần mềm KDE tạo ra các hình nhỏ cho các dạng thức tệp đồ hoạ nâng cao PostScript và RAW.</p>
     <p xml:lang="x-test">xxThese plugins allow KDE software to create thumbnails for advanced graphic file formats PostScript and Raw.xx</p>
@@ -141,6 +144,7 @@
       <caption xml:lang="sk">Dolphin s miniatúrou PostScript</caption>
       <caption xml:lang="sl">Dolphin s sličico iz PostScripta</caption>
       <caption xml:lang="sv">Dolphin med miniatyrbild för Postscript</caption>
+      <caption xml:lang="tr">Postscript küçük resmi içeren Dolphin</caption>
       <caption xml:lang="uk">Dolphin із мініатюрою файла PostScript</caption>
       <caption xml:lang="vi">Dolphin với hình nhỏ PostScript</caption>
       <caption xml:lang="x-test">xxDolphin with PostScript thumbnailxx</caption>
