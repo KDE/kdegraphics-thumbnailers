@@ -561,9 +561,9 @@ bool GSCreator::getEPSIPreview(const QString &path, long start, long
 
   // skip over the rest of the BeginPreview comment
   while ((offset < previewsize) &&
-         previewstr[offset] != '\n' &&
-	 previewstr[offset] != '\r') offset++;
-  while ((offset < previewsize) && previewstr[offset] != '%') offset++;
+         previewstr[offset] != QLatin1Char('\n') &&
+     previewstr[offset] != QLatin1Char('\r')) offset++;
+  while ((offset < previewsize) && previewstr[offset] != QLatin1Char('%')) offset++;
 
   unsigned int imagedepth;
   switch (depth) {

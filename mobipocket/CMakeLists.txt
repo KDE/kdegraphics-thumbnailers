@@ -14,9 +14,9 @@ find_package(KF5 REQUIRED
     )
 
 add_library(mobithumbnail MODULE ${mobithumbnail_SRCS})
-target_link_libraries(mobithumbnail KF5::KIOCore KF5::KIOWidgets Qt5::Gui qmobipocket)
+target_link_libraries(mobithumbnail KF5::KIOCore KF5::KIOWidgets Qt::Gui qmobipocket)
 install(TARGETS mobithumbnail DESTINATION ${KDE_INSTALL_PLUGINDIR})
 
 ########### install files ###############
 
-install( FILES mobithumbnail.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
+install( FILES mobithumbnail.desktop  DESTINATION  ${KDE_INSTALL_KSERVICESDIR} )

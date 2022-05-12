@@ -8,9 +8,9 @@ target_sources(gsthumbnail PRIVATE
 
 target_link_libraries(gsthumbnail
     KF5::KIOWidgets
-    Qt5::Gui
+    Qt::Gui
 )
 
 install(TARGETS gsthumbnail  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
-install(FILES gsthumbnail.desktop  DESTINATION  ${SERVICES_INSTALL_DIR})
+install(FILES gsthumbnail.desktop  DESTINATION  ${KDE_INSTALL_KSERVICESDIR})
 

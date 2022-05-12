@@ -10,11 +10,11 @@ target_link_libraries(rawthumbnail
     KF5::KIOWidgets
     KF5::KDcraw
     KF5::KExiv2
-    Qt5::Gui
+    Qt::Gui
 )
 
 ## install the plugin
 install(TARGETS rawthumbnail DESTINATION ${KDE_INSTALL_PLUGINDIR})
-install(FILES rawthumbnail.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+install(FILES rawthumbnail.desktop DESTINATION ${KDE_INSTALL_KSERVICESDIR})
 
 
