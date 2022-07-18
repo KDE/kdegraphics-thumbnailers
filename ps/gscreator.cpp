@@ -231,7 +231,7 @@ bool GSCreator::create(const QString &path, int width, int height, QImage &img)
     }
   }
 
-  std::auto_ptr<KDSCBBOX> bbox = dsc.bbox();
+  std::unique_ptr<KDSCBBOX> bbox = dsc.bbox();
 
   const bool is_encapsulated = no_dvi
     && (path.endsWith(QLatin1String(".eps"), Qt::CaseInsensitive)

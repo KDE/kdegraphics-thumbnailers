@@ -264,13 +264,8 @@ public:
     CDSCMEDIA** media()           const;
     const CDSCMEDIA* page_media() const;
 
-#if defined(__GNUC__) && (__GNUC__ < 2 || (__GNUC__ == 2 && __GNUC_MINOR__ < 93))
-    auto_ptr<KDSCBBOX> bbox()      const;
-    auto_ptr<KDSCBBOX> page_bbox() const;
-#else
-    std::auto_ptr<KDSCBBOX> bbox()      const;
-    std::auto_ptr<KDSCBBOX> page_bbox() const;
-#endif
+    std::unique_ptr<KDSCBBOX> bbox()      const;
+    std::unique_ptr<KDSCBBOX> page_bbox() const;
 
     // CDSCDOSEPS *doseps;
 
