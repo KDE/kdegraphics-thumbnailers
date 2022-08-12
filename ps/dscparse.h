@@ -1,4 +1,4 @@
-/* Copyright (C) 2000-2001, Ghostgum Software Pty Ltd.  All rights reserved.
+/* SPDX-FileCopyrightText: 2000-2001 Ghostgum Software Pty Ltd. All rights reserved.
     
   This file is part of GSview.
    
