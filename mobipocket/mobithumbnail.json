@@ -1,0 +1,9 @@
+{
+    "CacheThumbnail": true,
+    "KPlugin": {
+        "MimeTypes": [
+            "application/x-mobipocket-ebook"
+        ],
+        "Name": "Mobipocket Files"
+    }
+}

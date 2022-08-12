@@ -1,17 +1,11 @@
-add_library(blenderthumbnail MODULE)
+kcoreaddons_add_plugin(blenderthumbnail INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/thumbcreator")
 
-#sources
 target_sources(blenderthumbnail PRIVATE
     blendercreator.cpp
 )
 
-## includes and linking
 target_link_libraries(blenderthumbnail
     KF5::KIOWidgets
     KF5::Archive
     Qt::Core
 )
-
-## install the plugin
-install(TARGETS blenderthumbnail DESTINATION ${KDE_INSTALL_PLUGINDIR})
-install(FILES blenderthumbnail.desktop DESTINATION ${KDE_INSTALL_KSERVICESDIR})

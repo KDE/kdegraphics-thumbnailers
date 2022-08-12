@@ -85,6 +85,12 @@ extern "C"
     }
 }
 
+class KIOPluginForMetaData : public QObject
+{
+    Q_OBJECT
+    Q_PLUGIN_METADATA(IID "KIOPluginForMetaData" FILE "gsthumbnail.json")
+};
+
 // This PS snippet will be prepended to the actual file so that only
 // the first page is output.
 static const char *psprolog =
@@ -636,3 +642,5 @@ bool GSCreator::getEPSIPreview(const QString &path, long start, long
 
   return true;
 }
+
+#include "gscreator.moc"

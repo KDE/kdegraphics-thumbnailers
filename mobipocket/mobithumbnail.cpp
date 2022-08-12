@@ -21,6 +21,13 @@ extern "C"
     }
 }
 
+class KIOPluginForMetaData : public QObject
+{
+    Q_OBJECT
+    Q_PLUGIN_METADATA(IID "KIOPluginForMetaData" FILE "mobithumbnail.json")
+};
+
+
 bool MobiThumbnail::create(const QString &path, int width, int height, QImage &img)
 {
     Q_UNUSED(width);
@@ -38,3 +45,4 @@ ThumbCreator::Flags MobiThumbnail::flags() const
     return static_cast<Flags>(None);
 }
 
+#include "mobithumbnail.moc"

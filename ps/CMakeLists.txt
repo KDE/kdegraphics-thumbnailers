@@ -1,4 +1,4 @@
-add_library(gsthumbnail MODULE)
+kcoreaddons_add_plugin(gsthumbnail INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/thumbcreator")
 
 target_sources(gsthumbnail PRIVATE
     gscreator.cpp
@@ -10,7 +10,3 @@ target_link_libraries(gsthumbnail
     KF5::KIOWidgets
     Qt::Gui
 )
-
-install(TARGETS gsthumbnail  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
-install(FILES gsthumbnail.desktop  DESTINATION  ${KDE_INSTALL_KSERVICESDIR})
-

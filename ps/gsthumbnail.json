@@ -1,0 +1,12 @@
+{
+    "CacheThumbnail": true,
+    "KPlugin": {
+        "MimeTypes": [
+            "application/x-dvi",
+            "application/postscript",
+            "application/pdf",
+            "image/x-eps"
+        ],
+        "Name": "PostScript, PDF and DVI Files"
+    }
+}

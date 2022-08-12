@@ -1,0 +1,9 @@
+{
+    "CacheThumbnail": true,
+    "KPlugin": {
+        "MimeTypes": [
+            "image/x-dcraw"
+        ],
+        "Name": "RAW Photo Camera Files"
+    }
+}

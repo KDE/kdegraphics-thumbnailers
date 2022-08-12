@@ -34,6 +34,13 @@ extern "C"
     }
 }
 
+class KIOPluginForMetaData : public QObject
+{
+    Q_OBJECT
+    Q_PLUGIN_METADATA(IID "KIOPluginForMetaData" FILE "blenderthumbnail.json")
+};
+
+
 BlenderCreator::BlenderCreator() = default;
 
 BlenderCreator::~BlenderCreator() = default;
@@ -144,3 +151,5 @@ bool BlenderCreator::create(const QString &path, int width , int height, QImage 
     blendStream.device()->close();
     return true;
 }
+
+#include "blendercreator.moc"

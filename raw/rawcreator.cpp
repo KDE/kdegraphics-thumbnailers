@@ -32,6 +32,13 @@ extern "C"
     }
 }
 
+class KIOPluginForMetaData : public QObject
+{
+    Q_OBJECT
+    Q_PLUGIN_METADATA(IID "KIOPluginForMetaData" FILE "rawthumbnail.json")
+};
+
+
 RAWCreator::RAWCreator()
 {
 }
@@ -107,3 +114,5 @@ ThumbCreator::Flags RAWCreator::flags() const
 {
     return (Flags)(0);
 }
+
+#include "rawcreator.moc"
