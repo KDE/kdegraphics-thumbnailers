@@ -17,7 +17,6 @@ class MobiThumbnail : public ThumbCreator
 public:
     MobiThumbnail() {}
     bool create(const QString &path, int, int, QImage &img) override;
-    Flags flags() const override;
 };
 
 #endif

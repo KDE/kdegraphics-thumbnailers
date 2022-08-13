@@ -28,7 +28,6 @@ public:
     RAWCreator();
     ~RAWCreator() override;
     bool create(const QString &path, int width, int height, QImage &img) override;
-    Flags flags() const override;
 };
 
 #endif

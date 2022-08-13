@@ -28,7 +28,6 @@ class GSCreator : public ThumbCreator, public KDSCCommentHandler
 public:
     GSCreator() {}
     bool create(const QString &path, int, int, QImage &img) override;
-    Flags flags() const override;
     void comment(Name name) override;
 
 private:

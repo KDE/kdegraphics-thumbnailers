@@ -475,11 +475,6 @@ bool GSCreator::create(const QString &path, int width, int height, QImage &img)
   return ok && loaded;
 }
 
-ThumbCreator::Flags GSCreator::flags() const
-{
-    return static_cast<Flags>(None);
-}
-
 void GSCreator::comment(Name name)
 {
     switch (name) {

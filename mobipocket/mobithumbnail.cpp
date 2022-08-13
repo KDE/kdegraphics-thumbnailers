@@ -32,9 +32,3 @@ bool MobiThumbnail::create(const QString &path, int width, int height, QImage &i
     img=doc.thumbnail();
     return !img.isNull();
 }
-
-ThumbCreator::Flags MobiThumbnail::flags() const
-{
-    return static_cast<Flags>(None);
-}
-
