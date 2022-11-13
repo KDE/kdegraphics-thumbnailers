@@ -21,15 +21,15 @@
 #ifndef _BLENDCREATOR_H_
 #define _BLENDCREATOR_H_
 
-#include <KIO/ThumbCreator>
+#include <KIO/ThumbnailCreator>
 
-class BlenderCreator : public ThumbCreator
+class BlenderCreator : public KIO::ThumbnailCreator
 {
 public:
-    BlenderCreator();
+    BlenderCreator(QObject *parent, const QVariantList &args);
     ~BlenderCreator() override;
 
-    bool create(const QString &path, int width, int height, QImage &img) override;
+    KIO::ThumbnailResult create(const KIO::ThumbnailRequest &request) override;
 };
 
 #endif

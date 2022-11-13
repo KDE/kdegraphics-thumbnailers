@@ -13,22 +13,24 @@
 
 #include <QFile>
 
-extern "C"
+#include <KPluginFactory>
+
+K_PLUGIN_CLASS_WITH_JSON(MobiThumbnail, "mobithumbnail.json")
+
+MobiThumbnail::MobiThumbnail(QObject *parent, const QVariantList &args)
+    : KIO::ThumbnailCreator(parent, args)
 {
-    Q_DECL_EXPORT ThumbCreator *new_creator()
-    {
-        return new MobiThumbnail;
-    }
 }
 
-bool MobiThumbnail::create(const QString &path, int width, int height, QImage &img)
+KIO::ThumbnailResult MobiThumbnail::create(const KIO::ThumbnailRequest &request)
 {
-    Q_UNUSED(width);
-    Q_UNUSED(height);
-    
-    Mobipocket::QFileStream f(path);
+    Mobipocket::QFileStream f(request.url().toLocalFile());
     Mobipocket::Document doc(&f);
-    if (!doc.isValid()) return false;
-    img=doc.thumbnail();
-    return !img.isNull();
+    if (!doc.isValid()) {
+        return KIO::ThumbnailResult::fail();
+    }
+    QImage img = doc.thumbnail();
+    return !img.isNull() ? KIO::ThumbnailResult::pass(img) : KIO::ThumbnailResult::fail();
 }
+
+#include "mobithumbnail.moc"

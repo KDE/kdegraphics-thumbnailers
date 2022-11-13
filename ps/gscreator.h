@@ -20,20 +20,19 @@
 #ifndef _GSCREATOR_H_
 #define _GSCREATOR_H_
 
-#include <KIO/ThumbCreator>
+#include <KIO/ThumbnailCreator>
 #include "dscparse_adapter.h"
 
-class GSCreator : public ThumbCreator, public KDSCCommentHandler
+class GSCreator : public KIO::ThumbnailCreator, public KDSCCommentHandler
 {
 public:
-    GSCreator() {}
-    bool create(const QString &path, int, int, QImage &img) override;
+    GSCreator(QObject *parent, const QVariantList &args);
+    KIO::ThumbnailResult create(const KIO::ThumbnailRequest &request) override;
     void comment(Name name) override;
 
 private:
-    static bool getEPSIPreview(const QString &path,
+    static KIO::ThumbnailResult getEPSIPreview(const QString &path,
                                long start, long end,
-                               QImage &outimg,
                                int imgwidth, int imgheight);
     bool endComments;
 };

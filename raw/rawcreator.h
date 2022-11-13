@@ -20,14 +20,14 @@
 #ifndef RAWCREATOR_H
 #define RAWCREATOR_H
 
-#include <KIO/ThumbCreator>
+#include <KIO/ThumbnailCreator>
 
-class RAWCreator : public ThumbCreator
+class RAWCreator : public KIO::ThumbnailCreator
 {
 public:
-    RAWCreator();
+    RAWCreator(QObject *parent, const QVariantList &args);
     ~RAWCreator() override;
-    bool create(const QString &path, int width, int height, QImage &img) override;
+    KIO::ThumbnailResult create(const KIO::ThumbnailRequest &request) override;
 };
 
 #endif

@@ -24,27 +24,26 @@
 #include <QImage>
 #include <QPointer>
 #include <QtEndian>
+
 #include <KCompressionDevice>
+#include <KPluginFactory>
 
-extern "C"
+K_PLUGIN_CLASS_WITH_JSON(BlenderCreator, "blenderthumbnail.json")
+
+BlenderCreator::BlenderCreator(QObject *parent, const QVariantList &args)
+    : KIO::ThumbnailCreator(parent, args)
 {
-    Q_DECL_EXPORT ThumbCreator *new_creator()
-    {
-        return new BlenderCreator;
-    }
 }
-
-BlenderCreator::BlenderCreator() = default;
 
 BlenderCreator::~BlenderCreator() = default;
 
 // For more info. see https://developer.blender.org/diffusion/B/browse/master/release/bin/blender-thumbnailer.py
 
-bool BlenderCreator::create(const QString &path, int width , int height, QImage &img)
+KIO::ThumbnailResult BlenderCreator::create(const KIO::ThumbnailRequest &request)
 {
-    QFile file (path);
+    QFile file (request.url().toLocalFile());
     if(!file.open(QIODevice::ReadOnly)) {
-        return false;
+        return KIO::ThumbnailResult::fail();
     }
 
     QDataStream blendStream;
@@ -53,11 +52,11 @@ bool BlenderCreator::create(const QString &path, int width , int height, QImage 
     QPointer<KCompressionDevice> gzFile;
     if(file.peek(2).startsWith("\x1F\x8B")) { // gzip magic (each gzip member starts with ID1(0x1f) and ID2(0x8b))
         file.close();
-        gzFile = new KCompressionDevice(path, KCompressionDevice::GZip);
+        gzFile = new KCompressionDevice(request.url().toLocalFile(), KCompressionDevice::GZip);
         if (gzFile->open(QIODevice::ReadOnly)) {
             blendStream.setDevice(gzFile);
         } else {
-            return false;
+            return KIO::ThumbnailResult::fail();
         }
     }
 
@@ -75,7 +74,7 @@ bool BlenderCreator::create(const QString &path, int width , int height, QImage 
     blendStream.readRawData(head.data(), 12);
     if(!head.startsWith("BLENDER") || head.right(3).toInt() < 250 /*blender pre 2.5 had no thumbs*/) {
         blendStream.device()->close();
-        return false;
+        return KIO::ThumbnailResult::fail();
     }
 
     // Next is file block. This we have to skip.
@@ -100,7 +99,7 @@ bool BlenderCreator::create(const QString &path, int width , int height, QImage 
     while (true) {
         const int read = blendStream.readRawData(fileBlockHeader.data(), fileBlockHeaderSize);
         if (read != fileBlockHeaderSize) {
-            return false;
+            return KIO::ThumbnailResult::fail();
         }
         fileBlockSize = toInt32(fileBlockHeader.mid(4, 4)); // second header field
         // skip actual file-block data.
@@ -113,7 +112,7 @@ bool BlenderCreator::create(const QString &path, int width , int height, QImage 
 
     if(!fileBlockHeader.startsWith("TEST")) {
         blendStream.device()->close();
-        return false;
+        return KIO::ThumbnailResult::fail();
     }
 
     // Now comes actual thumbnail image data.
@@ -125,22 +124,24 @@ bool BlenderCreator::create(const QString &path, int width , int height, QImage 
     qint32 imgSize = fileBlockSize - 8;
     if (imgSize != x * y * 4) {
         blendStream.device()->close();
-        return false;
+        return KIO::ThumbnailResult::fail();
     }
 
     QByteArray imgBuffer(imgSize, '\0');
     blendStream.readRawData(imgBuffer.data(), imgSize);
     QImage thumbnail((const uchar*)imgBuffer.constData(), x, y, QImage::Format_ARGB32);
-    if(width != 128) {
-        thumbnail = thumbnail.scaledToWidth(width, Qt::SmoothTransformation);
+    if(request.targetSize().width() != 128) {
+        thumbnail = thumbnail.scaledToWidth(request.targetSize().width(), Qt::SmoothTransformation);
     }
-    if(height != 128) {
-        thumbnail = thumbnail.scaledToHeight(height, Qt::SmoothTransformation);
+    if(request.targetSize().height() != 128) {
+        thumbnail = thumbnail.scaledToHeight(request.targetSize().height(), Qt::SmoothTransformation);
     }
     thumbnail = thumbnail.rgbSwapped();
     thumbnail = thumbnail.mirrored();
-    img = thumbnail.convertToFormat(QImage::Format_ARGB32_Premultiplied);
+    QImage img = thumbnail.convertToFormat(QImage::Format_ARGB32_Premultiplied);
 
     blendStream.device()->close();
-    return true;
+    return !img.isNull() ? KIO::ThumbnailResult::pass(img) : KIO::ThumbnailResult::fail();
 }
+
+#include "blendercreator.moc"

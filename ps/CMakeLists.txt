@@ -6,8 +6,10 @@ target_sources(gsthumbnail PRIVATE
     dscparse_adapter.cpp
 )
 
+kcoreaddons_desktop_to_json(gsthumbnail gsthumbnail.desktop)
+
 target_link_libraries(gsthumbnail
-    KF5::KIOWidgets
+    KF5::KIOGui
     Qt::Gui
 )
 

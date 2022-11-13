@@ -5,9 +5,11 @@ target_sources(rawthumbnail PRIVATE
     rawcreator.cpp
 )
 
+kcoreaddons_desktop_to_json(rawthumbnail rawthumbnail.desktop)
+
 ## includes and linking
 target_link_libraries(rawthumbnail
-    KF5::KIOWidgets
+    KF5::KIOGui
     KF5::KDcraw
     KF5::KExiv2
     Qt::Gui

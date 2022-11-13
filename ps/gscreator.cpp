@@ -77,13 +77,9 @@
 #include "gscreator.h"
 #include "dscparse.h"
 
-extern "C"
-{
-    Q_DECL_EXPORT ThumbCreator *new_creator()
-    {
-        return new GSCreator;
-    }
-}
+#include <KPluginFactory>
+
+K_PLUGIN_CLASS_WITH_JSON(GSCreator, "gsthumbnail.json")
 
 // This PS snippet will be prepended to the actual file so that only
 // the first page is output.
@@ -169,9 +165,16 @@ namespace {
 	}
 }
 
-
-bool GSCreator::create(const QString &path, int width, int height, QImage &img)
+GSCreator::GSCreator(QObject *parent, const QVariantList &args)
+  : KIO::ThumbnailCreator(parent, args)
 {
+}
+
+KIO::ThumbnailResult GSCreator::create(const KIO::ThumbnailRequest &request)
+{
+  const QString path = request.url().toLocalFile();
+  const int width = request.targetSize().width();
+  const int height = request.targetSize().height();
 // The code in the loop (when testing whether got_sig_term got set)
 // should read some variation of:
 // 		parentJob()->wasKilled()
@@ -197,15 +200,15 @@ bool GSCreator::create(const QString &path, int width, int height, QImage &img)
   bool ok = false;
 
   // Test if file is DVI
-  bool no_dvi =!correctDVI(path);
+  bool no_dvi =!correctDVI(request.url().toLocalFile());
 
   if (pipe(input) == -1) {
-    return false;
+    return KIO::ThumbnailResult::fail();
   }
   if (pipe(output) == -1) {
     close(input[0]);
     close(input[1]);
-    return false;
+    return KIO::ThumbnailResult::fail();
   }
 
   KDSC dsc;
@@ -215,7 +218,7 @@ bool GSCreator::create(const QString &path, int width, int height, QImage &img)
   if (no_dvi)
   {
     FILE* fp = fopen(QFile::encodeName(path), "r");
-    if (fp == nullptr) return false;
+    if (fp == nullptr) return KIO::ThumbnailResult::fail();
 
     char buf[4096];
     int count;
@@ -227,7 +230,7 @@ bool GSCreator::create(const QString &path, int width, int height, QImage &img)
 
     if (dsc.pjl() || dsc.ctrld()) {
       // this file is a mess.
-      return false;
+      return KIO::ThumbnailResult::fail();
     }
   }
 
@@ -279,13 +282,12 @@ bool GSCreator::create(const QString &path, int width, int height, QImage &img)
       const int yscale = bbox->height() / height;
       const int scale = xscale < yscale ? xscale : yscale;
       if (scale == 0) break;
-      if (getEPSIPreview(path,
+      if (auto result = getEPSIPreview(path,
                          dsc.beginpreview(),
                          dsc.endpreview(),
-                         img,
                          bbox->width() / scale,
-                         bbox->height() / scale))
-        return true;
+                         bbox->height() / scale); result.isValid())
+        return result;
       // If the preview extraction routine fails, gs is used to
       // create a thumbnail.
     }
@@ -451,6 +453,7 @@ bool GSCreator::create(const QString &path, int width, int height, QImage &img)
   }
   close(output[0]);
 
+  QImage img;
   bool loaded = img.loadFromData( data );
 
   if (!loaded) {
@@ -472,7 +475,11 @@ bool GSCreator::create(const QString &path, int width, int height, QImage &img)
   }
   if ( oldhandler != SIG_ERR ) signal( SIGTERM, oldhandler );
 
-  return ok && loaded;
+  if (loaded) {
+    return KIO::ThumbnailResult::pass(img);
+  }
+
+  return KIO::ThumbnailResult::fail();
 }
 
 void GSCreator::comment(Name name)
@@ -515,12 +522,12 @@ static bool correctDVI(const QString& filename)
   return true;
 }
 
-bool GSCreator::getEPSIPreview(const QString &path, long start, long
-			       end, QImage &outimg, int imgwidth, int imgheight)
+KIO::ThumbnailResult GSCreator::getEPSIPreview(const QString &path, long start, long
+			       end, int imgwidth, int imgheight)
 {
   FILE *fp;
   fp = fopen(QFile::encodeName(path), "r");
-  if (fp == nullptr) return false;
+  if (fp == nullptr) return KIO::ThumbnailResult::fail();
 
   const long previewsize = end - start + 1;
 
@@ -532,7 +539,7 @@ bool GSCreator::getEPSIPreview(const QString &path, long start, long
   if (count != previewsize - 1)
   {
     free(buf);
-    return false;
+    return KIO::ThumbnailResult::fail();
   }
 
   QString previewstr = QString::fromLatin1(buf);
@@ -570,7 +577,7 @@ bool GSCreator::getEPSIPreview(const QString &path, long start, long
     break;
   case 12: // valid, but not (yet) supported
   default: // illegal value
-    return false;
+    return KIO::ThumbnailResult::fail();
   }
 
   unsigned int colors = (1U << depth);
@@ -593,7 +600,7 @@ bool GSCreator::getEPSIPreview(const QString &path, long start, long
 
   for (unsigned int i = 0; i < bindatabytes; i++) {
     if (offset >= previewsize)
-      return false;
+      return KIO::ThumbnailResult::fail();
 
     while (!isxdigit(previewstr[offset].toLatin1()) &&
 	   offset < previewsize)
@@ -602,7 +609,7 @@ bool GSCreator::getEPSIPreview(const QString &path, long start, long
     bool ok = false;
     bindata[i] = static_cast<unsigned char>(previewstr.mid(offset, 2).toUInt(&ok, 16));
     if (!ok)
-      return false;
+      return KIO::ThumbnailResult::fail();
 
     offset += 2;
   }
@@ -627,7 +634,9 @@ bool GSCreator::getEPSIPreview(const QString &path, long start, long
     }
   }
 
-  outimg = img.convertToFormat(QImage::Format_RGB32).scaled(imgwidth, imgheight, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+  QImage outimg = img.convertToFormat(QImage::Format_RGB32).scaled(imgwidth, imgheight, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
 
-  return true;
+  return !outimg.isNull() ? KIO::ThumbnailResult::pass(outimg) : KIO::ThumbnailResult::fail();
 }
+
+#include "gscreator.moc"

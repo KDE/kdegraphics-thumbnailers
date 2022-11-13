@@ -5,9 +5,11 @@ target_sources(blenderthumbnail PRIVATE
     blendercreator.cpp
 )
 
+kcoreaddons_desktop_to_json(blenderthumbnail blenderthumbnail.desktop)
+
 ## includes and linking
 target_link_libraries(blenderthumbnail
-    KF5::KIOWidgets
+    KF5::KIOGui
     KF5::Archive
     Qt::Core
 )

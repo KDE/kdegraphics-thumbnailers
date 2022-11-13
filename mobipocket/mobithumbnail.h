@@ -10,13 +10,13 @@
 #ifndef MOBITHUMBNAIL_H
 #define MOBITHUMBNAIL_H
 
-#include <kio/thumbcreator.h>
+#include <KIO/ThumbnailCreator>
 
-class MobiThumbnail : public ThumbCreator
+class MobiThumbnail : public KIO::ThumbnailCreator
 {
 public:
-    MobiThumbnail() {}
-    bool create(const QString &path, int, int, QImage &img) override;
+    MobiThumbnail(QObject *parent, const QVariantList &args);
+    KIO::ThumbnailResult create(const KIO::ThumbnailRequest &request) override;
 };
 
 #endif
