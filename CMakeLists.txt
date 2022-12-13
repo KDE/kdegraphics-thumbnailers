@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.16)
 project(kdegraphics-thumbnailers)
 
 set(QT_MIN_VERSION "5.15.2")
-set(KF5_MIN_VERSION "5.90.0")
+set(KF5_MIN_VERSION "5.92.0")
 set(KDE_COMPILERSETTINGS_LEVEL "5.82")
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -14,6 +14,7 @@ include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 include(FeatureSummary)
+include(ECMDeprecationSettings)
 
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Gui)
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS KIO)
@@ -54,6 +55,9 @@ set_package_properties("QMobipocket"    PROPERTIES
                        PURPOSE     "Required to build the mobipocket thumbnailer. ${DISABLE_MOBIPOCKET_TEXT}"
 )
 
+
+ecm_set_disabled_deprecation_versions(QT 5.15.2 KF 5.100.0
+    )
 
 ecm_optional_add_subdirectory(ps)
 
