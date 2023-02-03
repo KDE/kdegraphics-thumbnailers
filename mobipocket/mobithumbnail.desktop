@@ -42,6 +42,7 @@ Name[uk]=Файли Mobipocket
 Name[vi]=Tệp Mobipocket
 Name[x-test]=xxMobipocket Filesxx
 Name[zh_CN]=Mobipocket 文件
+Name[zh_TW]=Mobipocket 檔案
 X-KDE-ServiceTypes=ThumbCreator
 MimeType=application/x-mobipocket-ebook;
 X-KDE-Library=mobithumbnail
