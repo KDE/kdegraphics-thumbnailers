@@ -1,22 +1,12 @@
-add_library(rawthumbnail MODULE)
+kcoreaddons_add_plugin(rawthumbnail INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/thumbcreator")
 
-#sources
 target_sources(rawthumbnail PRIVATE
     rawcreator.cpp
 )
 
-kcoreaddons_desktop_to_json(rawthumbnail rawthumbnail.desktop)
-
-## includes and linking
 target_link_libraries(rawthumbnail
-    KF5::KIOGui
-    KF5::KDcraw
-    KF5::KExiv2
+    KF${QT_MAJOR_VERSION}::KIOGui
+    KF${QT_MAJOR_VERSION}::KDcraw
+    KF${QT_MAJOR_VERSION}::KExiv2
     Qt::Gui
 )
-
-## install the plugin
-install(TARGETS rawthumbnail DESTINATION ${KDE_INSTALL_PLUGINDIR})
-install(FILES rawthumbnail.desktop DESTINATION ${KDE_INSTALL_KSERVICESDIR})
-
-

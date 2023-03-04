@@ -2,11 +2,11 @@ cmake_minimum_required(VERSION 3.16)
 project(kdegraphics-thumbnailers)
 
 set(QT_MIN_VERSION "5.15.2")
-set(KF5_MIN_VERSION "5.92.0")
+set(KF_MIN_VERSION "5.92.0")
 set(KDE_COMPILERSETTINGS_LEVEL "5.82")
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
+find_package(ECM ${KF_MIN_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
 include(ECMOptionalAddSubdirectory)
@@ -17,22 +17,22 @@ include(FeatureSummary)
 include(ECMDeprecationSettings)
 
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Gui)
-find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS KIO)
-find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Archive)
+find_package(KF${QT_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED COMPONENTS KIO)
+find_package(KF${QT_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED COMPONENTS Archive)
 add_definitions(-DQT_USE_QSTRINGBUILDER)
 
 option(DISABLE_MOBIPOCKET "Disable the mobipocket thumbnailer." OFF)
 
-find_package(KF5KExiv2)
-set_package_properties("KF5KExiv2"    PROPERTIES
+find_package(KF${QT_MAJOR_VERSION}KExiv2)
+set_package_properties("KF${QT_MAJOR_VERSION}KExiv2"    PROPERTIES
                        DESCRIPTION "A library for reading and writing image metadata"
                        URL         "www.kde.org"
                        TYPE        OPTIONAL
                        PURPOSE     "Required to build the RAW thumbnailer"
 )
 
-find_package(KF5KDcraw)
-set_package_properties("KF5KDcraw"    PROPERTIES
+find_package(KF${QT_MAJOR_VERSION}KDcraw)
+set_package_properties("KF${QT_MAJOR_VERSION}KDcraw"    PROPERTIES
                        DESCRIPTION "A library for accessing raw files"
                        URL         "www.kde.org"
                        TYPE        OPTIONAL
@@ -47,13 +47,23 @@ else()
     set(DISABLE_MOBIPOCKET_TEXT "Disable with DISABLE_MOBIPOCKET")
 endif()
 
-find_package(QMobipocket)
-set_package_properties("QMobipocket"    PROPERTIES
-                       DESCRIPTION "A library for accessing mobipocket files"
-                       URL         "www.kde.org"
-                       TYPE        ${MOBIPOCKET_REQUIRED_TYPE}
-                       PURPOSE     "Required to build the mobipocket thumbnailer. ${DISABLE_MOBIPOCKET_TEXT}"
-)
+if(QT_MAJOR_VERSION STREQUAL "6")
+    find_package(QMobipocket6)
+    set_package_properties("QMobipocket6"    PROPERTIES
+                        DESCRIPTION "A library for accessing mobipocket files"
+                        URL         "www.kde.org"
+                        TYPE        ${MOBIPOCKET_REQUIRED_TYPE}
+                        PURPOSE     "Required to build the mobipocket thumbnailer. ${DISABLE_MOBIPOCKET_TEXT}"
+    )
+else()
+    find_package(QMobipocket)
+    set_package_properties("QMobipocket"    PROPERTIES
+                        DESCRIPTION "A library for accessing mobipocket files"
+                        URL         "www.kde.org"
+                        TYPE        ${MOBIPOCKET_REQUIRED_TYPE}
+                        PURPOSE     "Required to build the mobipocket thumbnailer. ${DISABLE_MOBIPOCKET_TEXT}"
+    )
+endif()
 
 
 ecm_set_disabled_deprecation_versions(QT 5.15.2 KF 5.100.0
@@ -61,13 +71,13 @@ ecm_set_disabled_deprecation_versions(QT 5.15.2 KF 5.100.0
 
 ecm_optional_add_subdirectory(ps)
 
-if(KF5KExiv2_FOUND AND KF5KDcraw_FOUND)
+if(KF${QT_MAJOR_VERSION}KExiv2_FOUND AND KF${QT_MAJOR_VERSION}KDcraw_FOUND)
 ecm_optional_add_subdirectory(raw)
 endif()
 
 ecm_optional_add_subdirectory(blend)
 
-if(QMobipocket_FOUND)
+if(QMobipocket6_FOUND OR QMobipocket_FOUND)
 ecm_optional_add_subdirectory(mobipocket)
 endif()
 

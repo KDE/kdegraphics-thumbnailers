@@ -1,4 +1,4 @@
-add_library(gsthumbnail MODULE)
+kcoreaddons_add_plugin(gsthumbnail INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/thumbcreator")
 
 target_sources(gsthumbnail PRIVATE
     gscreator.cpp
@@ -6,13 +6,7 @@ target_sources(gsthumbnail PRIVATE
     dscparse_adapter.cpp
 )
 
-kcoreaddons_desktop_to_json(gsthumbnail gsthumbnail.desktop)
-
 target_link_libraries(gsthumbnail
-    KF5::KIOGui
+    KF${QT_MAJOR_VERSION}::KIOGui
     Qt::Gui
 )
-
-install(TARGETS gsthumbnail  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
-install(FILES gsthumbnail.desktop  DESTINATION  ${KDE_INSTALL_KSERVICESDIR})
-

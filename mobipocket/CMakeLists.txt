@@ -1,10 +1,11 @@
-add_library(mobithumbnail MODULE)
+kcoreaddons_add_plugin(mobithumbnail INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/thumbcreator")
 
 target_sources(mobithumbnail PRIVATE mobithumbnail.cpp)
 
-kcoreaddons_desktop_to_json(mobithumbnail mobithumbnail.desktop)
+target_link_libraries(mobithumbnail KF${QT_MAJOR_VERSION}::KIOCore KF${QT_MAJOR_VERSION}::KIOGui Qt::Gui)
 
-target_link_libraries(mobithumbnail KF5::KIOCore KF5::KIOGui Qt::Gui qmobipocket)
-install(TARGETS mobithumbnail DESTINATION ${KDE_INSTALL_PLUGINDIR})
-
-install( FILES mobithumbnail.desktop  DESTINATION  ${KDE_INSTALL_KSERVICESDIR} )
+if (QT_MAJOR_VERSION STREQUAL "5")
+    target_link_libraries(mobithumbnail qmobipocket)
+else()
+    target_link_libraries(mobithumbnail QMobipocket6)
+endif()
