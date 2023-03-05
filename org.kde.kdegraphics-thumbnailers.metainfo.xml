@@ -45,7 +45,7 @@
   <name xml:lang="zh-CN">kdegraphics-thumbnailers</name>
   <name xml:lang="zh-TW">kdegraphics-thumbnailers</name>
   <summary>Graphics file format thumbnailers for KDE applications</summary>
-  <summary xml:lang="ar">مصغرات لملفات الرسوميات لتطبيقات كدي</summary>
+  <summary xml:lang="ar">مصغرات لملفات الرسوميات لتطبيقات كِيدِي</summary>
   <summary xml:lang="bg">Graphics file format thumbnailers for KDE applications</summary>
   <summary xml:lang="ca">Miniatures per als formats de fitxer de gràfics per a les aplicacions KDE</summary>
   <summary xml:lang="ca-valencia">Miniatures per als formats de fitxer de gràfics per a les aplicacions KDE</summary>
@@ -83,7 +83,7 @@
   <summary xml:lang="zh-TW">適用於 KDE 應用程式的圖形檔案格式縮圖產生工具</summary>
   <description>
     <p>These plugins allow KDE software to create thumbnails for advanced graphic file formats PostScript and Raw.</p>
-    <p xml:lang="ar">تسمح هذه المكونات الإضافية لبرنامج كدي بإنشاء صور مصغرة لتنسيقات ملفات الرسوم المتقدمة PostScript و Raw.</p>
+    <p xml:lang="ar">تسمح هذه المكونات الإضافية لبرنامج كِيدِي بإنشاء صور مصغرة لتنسيقات ملفات الرسوم المتقدمة PostScript و Raw.</p>
     <p xml:lang="bg">Тази приставка позволява на приложенията на KDE да създават миниатюри на разширени графични файлови формати като PostScript и Raw. </p>
     <p xml:lang="ca">Aquests connectors permeten que el programari KDE creï miniatures per als formats de fitxer de gràfics avançats PostScript i RAW.</p>
     <p xml:lang="ca-valencia">Estos connectors permeten que el programari KDE cree miniatures per als formats de fitxer de gràfics avançats PostScript i RAW.</p>
