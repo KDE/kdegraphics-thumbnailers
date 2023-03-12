@@ -16,6 +16,7 @@
   <name xml:lang="de">kdegraphics-thumbnailers</name>
   <name xml:lang="el">kdegraphics-thumbnailers</name>
   <name xml:lang="en-GB">kdegraphics-thumbnailers</name>
+  <name xml:lang="eo">kdegraphics-thumbnailers</name>
   <name xml:lang="es">kdegraphics-thumbnailers</name>
   <name xml:lang="et">kdegraphics-thumbnailers</name>
   <name xml:lang="eu">kdegraphics-koadro-txiki-egileak</name>
@@ -53,6 +54,7 @@
   <summary xml:lang="de">Vorschaubilder von grafischen Dateiformaten für KDE-Anwendungen</summary>
   <summary xml:lang="el">Εικόνες επισκόπησης tvn τύπων αποθήκευσης αρχείων γραφικών για τις εφαρmογές του KDE</summary>
   <summary xml:lang="en-GB">Graphics file format thumbnailers for KDE applications</summary>
+  <summary xml:lang="eo">Grafikdosierformataj bildetigiloj por KDE-apliaĵoj</summary>
   <summary xml:lang="es">Generadores de miniaturas de formatos gráficos para aplicaciones de KDE</summary>
   <summary xml:lang="et">Graafikafaili vormingus pisipildid KDE rakendustele</summary>
   <summary xml:lang="eu">KDE aplikazioetarako formatu grafikoen koadro-txiki egilea</summary>
@@ -91,6 +93,7 @@
     <p xml:lang="de">Mit diesem Modul können KDE-Anwendungen Vorschaubilder für die Grafikformate PostScript und Raw erstellen.</p>
     <p xml:lang="el">Αυτά τα πρόσθετα επιτρέπουν στο λογισμικό του KDE να δημιουργεί εικόνες επισκόπησης για προηγμένους τύπους αποθήκευσης αρχείων PostScript και Raw.</p>
     <p xml:lang="en-GB">These plugins allow KDE software to create thumbnails for advanced graphic file formats PostScript and Raw.</p>
+    <p xml:lang="eo">Ĉi tiuj kromprogramoj permesas al KDE-softvaro krei bildetojn por progresintajgrafikformatoj PostScript kaj Raw.</p>
     <p xml:lang="es">Estos complementos permiten a las aplicaciones de KDE crear miniaturas de los formatos de archivos gráficos avanzados PostScript y Raw.</p>
     <p xml:lang="et">Need pluginad lubavad KDE tarkvaral luua pisipilte täiustatud graafikafailide vormingutele PostScript ja Raw.</p>
     <p xml:lang="eu">Plugin honek KDE softwareari PostScript eta Raw formatu grafiko aurreratuen koadro-txikiak sortzen laguntzen dio.</p>
@@ -134,6 +137,7 @@
       <caption xml:lang="de">Dolphin mit der Vorschau einer PostScript-Datei</caption>
       <caption xml:lang="el">Το Dolphin με εικόνα επισκόπησης PostScript</caption>
       <caption xml:lang="en-GB">Dolphin with PostScript thumbnail</caption>
+      <caption xml:lang="eo">Dolfin kun PostScript-bildeto</caption>
       <caption xml:lang="es">Dolphin con miniaturas de PostScript</caption>
       <caption xml:lang="et">Dolphin PostScripti pisipildiga</caption>
       <caption xml:lang="eu">Dolphin PostScript baten koadro-txiki batekin</caption>
