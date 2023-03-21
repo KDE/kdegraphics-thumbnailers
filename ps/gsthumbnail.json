@@ -80,7 +80,7 @@
         "Name[x-test]": "xxPostScript, PDF and DVI Filesxx",
         "Name[zh_CN]": "PostScript、PDF 和 DVI 文件",
         "Name[zh_HK]": "PostScript 、PDF 及 DVI 檔案",
-        "Name[zh_TW]": "PostScript，PDF 與 DVI 檔"
+        "Name[zh_TW]": "PostScript，PDF 與 DVI 檔 "
     },
     "MimeType": "application/x-dvi;application/postscript;application/pdf;image/x-eps;"
 }
