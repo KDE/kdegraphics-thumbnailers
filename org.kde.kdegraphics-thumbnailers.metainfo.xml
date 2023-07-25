@@ -67,7 +67,7 @@
   <summary xml:lang="is">Gerð smámynda fyrir skráasnið í KDE-forritum</summary>
   <summary xml:lang="it">Generatori di miniature dei file di formati grafici per le applicazioni di KDE</summary>
   <summary xml:lang="ka">გრაფიკული ფაილების მინიატურები KDE-ის აპლიკაციებისთვის</summary>
-  <summary xml:lang="ko">KDE 프로그램의 그래픽 파일 축소판 생성 도구</summary>
+  <summary xml:lang="ko">KDE 앱의 그래픽 파일 섬네일 생성 도구</summary>
   <summary xml:lang="nl">Grafisch bestandsformaat van miniaturen voor KDE toepassingen</summary>
   <summary xml:lang="nn">Miniatyrbiletlagar for ymse grafikkformat for bruk i KDE-program</summary>
   <summary xml:lang="pl">Twórcy miniatur dla plików graficznych dla aplikacji KDE</summary>
@@ -107,7 +107,7 @@
     <p xml:lang="is">Þessar viðbætur gerir KDE-hugbúnaði kleift að útbúa smámyndir fyrir þróuð skráasnið á borð við PostScript og RAW.</p>
     <p xml:lang="it">Queste estensioni permettono al software di KDE di creare le miniature dei formati di file grafici avanzati PostScript e Raw.</p>
     <p xml:lang="ka">ეს დამატება საშუალებას აძლევს KDE-ის პროგრამებს შექმნან მინიატურები ისეთი ფაილის ფორმატების, როგორიცაა პოსტსკრიპტი და RAW.</p>
-    <p xml:lang="ko">이 플러그인을 사용하여 KDE 프로그램에서 포스트스크립트나 RAW와 같은 복잡한 그래픽 파일 형식의 축소판을 만들 수 있습니다.</p>
+    <p xml:lang="ko">이 플러그인을 사용하여 KDE 프로그램에서 포스트스크립트나 RAW와 같은 복잡한 그래픽 파일 형식의 섬네일을 만들 수 있습니다.</p>
     <p xml:lang="nl">Deze plug-ins bieden KDE software om miniaturen aan te maken voor geavanceerde grafische bestandsformaten PostScript en Raw.</p>
     <p xml:lang="nn">Desse programtillegga gjer det mogleg for KDE-programvare å laga miniatyrbilete for avanserte grafikkformat, for eksempel PostScript og råbilete.</p>
     <p xml:lang="pl">Te wtyczki umożliwiają oprogramowaniu KDE tworzenie miniatur dla zaawansowanych formatów graficznych PostScript oraz Raw.</p>
@@ -152,7 +152,7 @@
       <caption xml:lang="is">Dolphin með PostScript-smámynd</caption>
       <caption xml:lang="it">Dolphin con le miniature PostScript</caption>
       <caption xml:lang="ka">Dolphin პოსტსკრიპტის მინიატურით</caption>
-      <caption xml:lang="ko">포스트스크립트 축소판이 표시된 Dolphin</caption>
+      <caption xml:lang="ko">포스트스크립트 섬네일이 표시된 Dolphin</caption>
       <caption xml:lang="nl">Dolphin met PostScript-miniatuur</caption>
       <caption xml:lang="nn">Dolphin med miniatyrbilete for PostScript-fil</caption>
       <caption xml:lang="pl">Dolphin z miniaturami PostScript</caption>
