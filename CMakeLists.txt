@@ -31,8 +31,13 @@ set_package_properties("KF${QT_MAJOR_VERSION}KExiv2"    PROPERTIES
                        PURPOSE     "Required to build the RAW thumbnailer"
 )
 
-find_package(KF${QT_MAJOR_VERSION}KDcraw)
-set_package_properties("KF${QT_MAJOR_VERSION}KDcraw"    PROPERTIES
+if(QT_MAJOR_VERSION STREQUAL "6")
+    set(KDcrawPackageName KDcrawQt6)
+else()
+    set(KDcrawPackageName KF5KDcraw)
+endif()
+find_package(${KDcrawPackageName})
+set_package_properties(${KDcrawPackageName}    PROPERTIES
                        DESCRIPTION "A library for accessing raw files"
                        URL         "www.kde.org"
                        TYPE        OPTIONAL
@@ -71,7 +76,7 @@ ecm_set_disabled_deprecation_versions(QT 5.15.2 KF 5.100.0
 
 ecm_optional_add_subdirectory(ps)
 
-if(KF${QT_MAJOR_VERSION}KExiv2_FOUND AND KF${QT_MAJOR_VERSION}KDcraw_FOUND)
+if(KF${QT_MAJOR_VERSION}KExiv2_FOUND AND ${KDcrawPackageName}_FOUND)
 ecm_optional_add_subdirectory(raw)
 endif()
 
