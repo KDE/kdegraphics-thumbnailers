@@ -23,8 +23,13 @@ add_definitions(-DQT_USE_QSTRINGBUILDER)
 
 option(DISABLE_MOBIPOCKET "Disable the mobipocket thumbnailer." OFF)
 
-find_package(KF${QT_MAJOR_VERSION}KExiv2)
-set_package_properties("KF${QT_MAJOR_VERSION}KExiv2"    PROPERTIES
+if(QT_MAJOR_VERSION STREQUAL "6")
+    set(KExiv2PackageName KExiv2Qt6)
+else()
+    set(KExiv2PackageName KF5KExiv2)
+endif()
+find_package(${KExiv2PackageName})
+set_package_properties(${KExiv2PackageName}    PROPERTIES
                        DESCRIPTION "A library for reading and writing image metadata"
                        URL         "www.kde.org"
                        TYPE        OPTIONAL
@@ -76,7 +81,7 @@ ecm_set_disabled_deprecation_versions(QT 5.15.2 KF 5.100.0
 
 ecm_optional_add_subdirectory(ps)
 
-if(KF${QT_MAJOR_VERSION}KExiv2_FOUND AND ${KDcrawPackageName}_FOUND)
+if(${KExiv2PackageName}_FOUND AND ${KDcrawPackageName}KDcraw_FOUND)
 ecm_optional_add_subdirectory(raw)
 endif()
 
