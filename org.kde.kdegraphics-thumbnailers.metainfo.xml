@@ -42,7 +42,6 @@
   <name xml:lang="tr">kdegraphics-thumbnailers</name>
   <name xml:lang="uk">kdegraphics-thumbnailers</name>
   <name xml:lang="vi">kdegraphics-thumbnailers</name>
-  <name xml:lang="x-test">xxkdegraphics-thumbnailersxx</name>
   <name xml:lang="zh-CN">kdegraphics-thumbnailers</name>
   <name xml:lang="zh-TW">kdegraphics-thumbnailers</name>
   <summary>Graphics file format thumbnailers for KDE applications</summary>
@@ -81,7 +80,6 @@
   <summary xml:lang="tr">KDE uygulamaları için grafik dosya biçimi küçük resimleri</summary>
   <summary xml:lang="uk">Засоби створення мініатюр вмісту файлів із графікою для програм KDE</summary>
   <summary xml:lang="vi">Bộ tạo hình nhỏ định dạng tệp đồ hoạ cho các ứng dụng KDE</summary>
-  <summary xml:lang="x-test">xxGraphics file format thumbnailers for KDE applicationsxx</summary>
   <summary xml:lang="zh-CN">KDE 应用程序的图形和图像文件缩略图生成器</summary>
   <summary xml:lang="zh-TW">適用於 KDE 應用程式的圖形檔案格式縮圖產生工具</summary>
   <description>
@@ -121,7 +119,6 @@
     <p xml:lang="tr">Bu eklenti, KDE yazılımlarının Postscript ve RAW dosyaları gibi gelişmiş grafik biçimleri için küçük resimler oluşturmasına izin verir.</p>
     <p xml:lang="uk">Ці додатки уможливлюють створення мініатюр вмісту для файлів графічних даних, зокрема PostScript та цифрових негативів (RAW), у програмах KDE.</p>
     <p xml:lang="vi">Những phần cài cắm này cho phép phần mềm KDE tạo ra các hình nhỏ cho các định dạng tệp đồ hoạ nâng cao PostScript và RAW.</p>
-    <p xml:lang="x-test">xxThese plugins allow KDE software to create thumbnails for advanced graphic file formats PostScript and Raw.xx</p>
     <p xml:lang="zh-CN">这些插件用于为 KDE 软件生成高级图形文件格式的缩略图，如 PostScript 和 RAW 等。</p>
     <p xml:lang="zh-TW">這些外掛程式讓 KDE 應用程式能建立進階圖形檔案格式 (PostScript 及 Raw) 的縮圖。</p>
   </description>
@@ -166,7 +163,6 @@
       <caption xml:lang="tr">Postscript küçük resmi içeren Dolphin</caption>
       <caption xml:lang="uk">Dolphin із мініатюрою файла PostScript</caption>
       <caption xml:lang="vi">Dolphin với hình nhỏ PostScript</caption>
-      <caption xml:lang="x-test">xxDolphin with PostScript thumbnailxx</caption>
       <caption xml:lang="zh-CN">Dolphin 正在显示 PostScript 缩略图</caption>
       <caption xml:lang="zh-TW">Dolphin 和 PostScript 縮圖</caption>
     </screenshot>
