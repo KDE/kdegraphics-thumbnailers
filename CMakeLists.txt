@@ -81,7 +81,7 @@ ecm_set_disabled_deprecation_versions(QT 5.15.2 KF 5.100.0
 
 ecm_optional_add_subdirectory(ps)
 
-if(${KExiv2PackageName}_FOUND AND ${KDcrawPackageName}KDcraw_FOUND)
+if(${KExiv2PackageName}_FOUND AND ${KDcrawPackageName}_FOUND)
 ecm_optional_add_subdirectory(raw)
 endif()
 
