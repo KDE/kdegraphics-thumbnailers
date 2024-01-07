@@ -86,44 +86,6 @@
   <summary xml:lang="zh-TW">適用於 KDE 應用程式的圖形檔案格式縮圖產生工具</summary>
   <description>
     <p>These plugins allow KDE software to display thumbnails for PostScript, RAW, Mobipocket, and Blender files.</p>
-    <p xml:lang="ar">تسمح هذه المكونات الإضافية لبرنامج كِيدِي بإنشاء صور مصغرة لتنسيقات ملفات الرسوم المتقدمة PostScript و Raw.</p>
-    <p xml:lang="bg">Тази приставка позволява на приложенията на KDE да създават миниатюри на разширени графични файлови формати като PostScript и Raw. </p>
-    <p xml:lang="ca">Aquests connectors permeten que el programari KDE creï miniatures per als formats de fitxer de gràfics avançats PostScript i RAW.</p>
-    <p xml:lang="ca-valencia">Estos connectors permeten que el programari KDE cree miniatures per als formats de fitxer de gràfics avançats PostScript i RAW.</p>
-    <p xml:lang="da">Disse plugins lader KDE-software oprette miniaturer af avancerede grafiske filformater såsom PostScript og Raw.</p>
-    <p xml:lang="de">Mit diesem Modul können KDE-Anwendungen Vorschaubilder für die Grafikformate PostScript und Raw erstellen.</p>
-    <p xml:lang="el">Αυτά τα πρόσθετα επιτρέπουν στο λογισμικό του KDE να δημιουργεί εικόνες επισκόπησης για προηγμένους τύπους αποθήκευσης αρχείων PostScript και Raw.</p>
-    <p xml:lang="en-GB">These plugins allow KDE software to create thumbnails for advanced graphic file formats PostScript and Raw.</p>
-    <p xml:lang="eo">Ĉi tiuj kromprogramoj permesas al KDE-softvaro krei bildetojn por progresintajgrafikformatoj PostScript kaj Raw.</p>
-    <p xml:lang="es">Estos complementos permiten a las aplicaciones de KDE crear miniaturas de los formatos de archivos gráficos avanzados PostScript y Raw.</p>
-    <p xml:lang="et">Need pluginad lubavad KDE tarkvaral luua pisipilte täiustatud graafikafailide vormingutele PostScript ja Raw.</p>
-    <p xml:lang="eu">Plugin honek KDE softwareari PostScript eta Raw formatu grafiko aurreratuen koadro-txikiak sortzen laguntzen dio.</p>
-    <p xml:lang="fi">Näillä liitännäisillä KDE-sovellukset luovat pienoiskuvia edistyneistä kuvatiedostomuodoista (PostScript ja Raw).</p>
-    <p xml:lang="fr">Ces modules externes permettent aux logiciels KDE de créer des vignettes pour les formats de fichiers graphiques avancés « PostScript » et « Raw ».</p>
-    <p xml:lang="gl">Estes complementos permiten aos programas de KDE crear miniaturas para os formatos de ficheiro gráficos avanzados PostScript e cru.</p>
-    <p xml:lang="hi">ये प्लगइल, केडीई अनुप्रयोगों को उन्नत ग्राफ़िक्स फाइल प्रारूप पोस्टस्क्रिप्ट एवं रॉ के लिए लघुछवि सृजन करने मैं उपयोगी हैं।</p>
-    <p xml:lang="ia">Iste plugins permitte a software de KDE de crear thumbnails (miniaturas) per formatos de file graphic avantiate PostScript e Raw.</p>
-    <p xml:lang="id">Plugin tersebut memungkinkan perangkat lunak KDE untuk membuat thumbnail untuk file grafik tingkat lanjut format PostScript dan RAW</p>
-    <p xml:lang="is">Þessar viðbætur gerir KDE-hugbúnaði kleift að útbúa smámyndir fyrir þróuð skráasnið á borð við PostScript og RAW.</p>
-    <p xml:lang="it">Queste estensioni permettono al software di KDE di creare le miniature dei formati di file grafici avanzati PostScript e Raw.</p>
-    <p xml:lang="ka">ეს დამატება საშუალებას აძლევს KDE-ის პროგრამებს შექმნან მინიატურები ისეთი ფაილის ფორმატების, როგორიცაა პოსტსკრიპტი და RAW.</p>
-    <p xml:lang="ko">이 플러그인을 사용하여 KDE 프로그램에서 포스트스크립트나 RAW와 같은 복잡한 그래픽 파일 형식의 섬네일을 만들 수 있습니다.</p>
-    <p xml:lang="nl">Deze plug-ins bieden KDE software om miniaturen aan te maken voor geavanceerde grafische bestandsformaten PostScript en Raw.</p>
-    <p xml:lang="nn">Desse programtillegga gjer det mogleg for KDE-programvare å laga miniatyrbilete for avanserte grafikkformat, for eksempel PostScript og råbilete.</p>
-    <p xml:lang="pl">Te wtyczki umożliwiają oprogramowaniu KDE tworzenie miniatur dla zaawansowanych formatów graficznych PostScript oraz Raw.</p>
-    <p xml:lang="pt">Estes 'plugins' permitem às aplicações do KDE criarem miniaturas de formatos de ficheiros gráficos avançados, como o PostScript e o RAW.</p>
-    <p xml:lang="pt-BR">Estes plugins permitem aos aplicativos do KDE criarem miniaturas de formatos de arquivo gráficos avançados, como PostScript e RAW.</p>
-    <p xml:lang="ro">Aceste extensii permit programelor KDE să creeze miniaturi pentru formatele avansate de grafică PostScript și Raw.</p>
-    <p xml:lang="ru">Эти подключаемые модули служат для создания миниатюр файлов форматов PostScript и RAW в приложениях KDE.</p>
-    <p xml:lang="sk">Tieto doplnky umožňujú softvéru KDE vytvárať miniatúry pre pokročilé formáty grafických súborov PostScript a Raw.</p>
-    <p xml:lang="sl">Ti vtičniki omogočajo programski opremi KDE, da ustvari sličice iz naprednih grafičnih datotek PostScript in Raw.</p>
-    <p xml:lang="sv">Insticksprogrammen låter KDE-programvara skapa miniatyrbilder för de avancerade grafikformaten Postscript och obehandlade filer.</p>
-    <p xml:lang="tr">Bu eklenti, KDE yazılımlarının Postscript ve RAW dosyaları gibi gelişmiş grafik biçimleri için küçük resimler oluşturmasına izin verir.</p>
-    <p xml:lang="uk">Ці додатки уможливлюють створення мініатюр вмісту для файлів графічних даних, зокрема PostScript та цифрових негативів (RAW), у програмах KDE.</p>
-    <p xml:lang="vi">Những phần cài cắm này cho phép phần mềm KDE tạo ra các hình nhỏ cho các định dạng tệp đồ hoạ nâng cao PostScript và RAW.</p>
-    <p xml:lang="x-test">xxThese plugins allow KDE software to create thumbnails for advanced graphic file formats PostScript and Raw.xx</p>
-    <p xml:lang="zh-CN">这些插件用于为 KDE 软件生成高级图形文件格式的缩略图，如 PostScript 和 RAW 等。</p>
-    <p xml:lang="zh-TW">這些外掛程式讓 KDE 應用程式能建立進階圖形檔案格式 (PostScript 及 Raw) 的縮圖。</p>
   </description>
   <url type="homepage">https://www.kde.org</url>
   <url type="bugtracker">https://bugs.kde.org/</url>
