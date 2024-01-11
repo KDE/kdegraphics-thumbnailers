@@ -89,6 +89,7 @@
     <p xml:lang="ca">Aquests connectors permeten que el programari KDE mostri miniatures per als fitxers PostScript, RAW, Mobipocket i Blender.</p>
     <p xml:lang="ca-valencia">Estos connectors permeten que el programari KDE mostre miniatures per als fitxers PostScript, RAW, Mobipocket i Blender.</p>
     <p xml:lang="eo">Ĉi tiuj kromprogramoj permesas al KDE-programaro montri bildetojn por dosieroj PostScript, RAW, Mobipocket kaj Blender.</p>
+    <p xml:lang="es">Estos complementos permiten al software de KDE mostrar miniaturas de los archivos PostScript, RAW, Mobipocket y Blender.</p>
     <p xml:lang="fr">Ces modules externes permettent aux logiciels de KDE de créer des vignettes pour les formats de fichiers « PostScript », « Raw », « Mobipocket » et « Blender ».</p>
     <p xml:lang="ia">Iste plugins permitte a software de KDE de crear thumbnails (miniaturas) per files de PostScript, Raw, Mobypocket e Blender.</p>
     <p xml:lang="nl">Deze plug-ins bieden KDE software het tonen van miniaturen PostScript, RAW, Mobipocket en Blender-bestanden.</p>
@@ -96,6 +97,7 @@
     <p xml:lang="tr">Bu eklentiler; KDE yazılımlarının PostScript, RAW, Mobipocket ve Blender dosyaları için küçük görseller görüntülemesine olanak tanır.</p>
     <p xml:lang="uk">Ці додатки уможливлюють для програмного забезпечення KDE показ мініатюр для вмісту файлів PostScript, RAW, Mobipocket і Blender.</p>
     <p xml:lang="x-test">xxThese plugins allow KDE software to display thumbnails for PostScript, RAW, Mobipocket, and Blender files.xx</p>
+    <p xml:lang="zh-TW">這些外掛程式讓 KDE 應用程式能夠顯示 PostScript、RAW、Mobipocket 及 Blender 檔案的縮圖。</p>
   </description>
   <url type="homepage">https://www.kde.org</url>
   <url type="bugtracker">https://bugs.kde.org/</url>
@@ -140,7 +142,7 @@
       <caption xml:lang="vi">Dolphin với hình nhỏ PostScript</caption>
       <caption xml:lang="x-test">xxDolphin with PostScript thumbnailxx</caption>
       <caption xml:lang="zh-CN">Dolphin 正在显示 PostScript 缩略图</caption>
-      <caption xml:lang="zh-TW">Dolphin 和 PostScript 縮圖</caption>
+      <caption xml:lang="zh-TW">有 PostScript 縮圖的 Dolphin</caption>
     </screenshot>
   </screenshots>
   <project_group>KDE</project_group>
