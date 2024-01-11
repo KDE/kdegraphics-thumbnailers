@@ -66,7 +66,7 @@
         "Name[vi]": "Tệp máy ảnh RAW",
         "Name[x-test]": "xxRAW Photo Camera Filesxx",
         "Name[zh_CN]": "RAW 相机文件",
-        "Name[zh_TW]": "原始相機檔"
+        "Name[zh_TW]": "相機 RAW 照片檔案"
     },
     "MimeType": "image/x-dcraw;"
 }
