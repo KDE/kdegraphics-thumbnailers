@@ -98,6 +98,7 @@
     <p xml:lang="tr">Bu eklentiler; KDE yazılımlarının PostScript, RAW, Mobipocket ve Blender dosyaları için küçük görseller görüntülemesine olanak tanır.</p>
     <p xml:lang="uk">Ці додатки уможливлюють для програмного забезпечення KDE показ мініатюр для вмісту файлів PostScript, RAW, Mobipocket і Blender.</p>
     <p xml:lang="x-test">xxThese plugins allow KDE software to display thumbnails for PostScript, RAW, Mobipocket, and Blender files.xx</p>
+    <p xml:lang="zh-CN">这些插件用于在 KDE 软件中显示 PostScript、RAW、Mobipocket 和 Blender 等文件格式的缩略图。</p>
     <p xml:lang="zh-TW">這些外掛程式讓 KDE 應用程式能夠顯示 PostScript、RAW、Mobipocket 及 Blender 檔案的縮圖。</p>
   </description>
   <url type="homepage">https://www.kde.org</url>
