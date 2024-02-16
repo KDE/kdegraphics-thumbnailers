@@ -78,7 +78,7 @@
   <summary xml:lang="sk">Miniatúry formátov grafických súborov pre aplikácie KDE</summary>
   <summary xml:lang="sl">Orodje za pripravo sličic za aplikacije KDE iz grafičnih datotek</summary>
   <summary xml:lang="sv">Miniatyrbilder för grafikfilformat för KDE-program</summary>
-  <summary xml:lang="tr">KDE uygulamaları için grafik dosya biçimi küçük önizleyicileri</summary>
+  <summary xml:lang="tr">KDE uygulamaları için grafik dosya biçimi küçük resimleri</summary>
   <summary xml:lang="uk">Засоби створення мініатюр вмісту файлів із графікою для програм KDE</summary>
   <summary xml:lang="vi">Bộ tạo hình nhỏ định dạng tệp đồ hoạ cho các ứng dụng KDE</summary>
   <summary xml:lang="x-test">xxGraphics file format thumbnailers for KDE applicationsxx</summary>
@@ -86,27 +86,6 @@
   <summary xml:lang="zh-TW">適用於 KDE 應用程式的圖形檔案格式縮圖產生工具</summary>
   <description>
     <p>These plugins allow KDE software to display thumbnails for PostScript, RAW, Mobipocket, and Blender files.</p>
-    <p xml:lang="bg">Тази приставка позволява на приложенията на KDE да създават миниатюри на разширени графични файлови формати като PostScript, Raw, Mobipocket и Blender.</p>
-    <p xml:lang="ca">Aquests connectors permeten que el programari KDE mostri miniatures per als fitxers PostScript, RAW, Mobipocket i Blender.</p>
-    <p xml:lang="ca-valencia">Estos connectors permeten que el programari KDE mostre miniatures per als fitxers PostScript, RAW, Mobipocket i Blender.</p>
-    <p xml:lang="eo">Ĉi tiuj kromprogramoj permesas al KDE-programaro montri bildetojn por dosieroj PostScript, RAW, Mobipocket kaj Blender.</p>
-    <p xml:lang="es">Estos complementos permiten al software de KDE mostrar miniaturas de los archivos PostScript, RAW, Mobipocket y Blender.</p>
-    <p xml:lang="eu">Plugin hauek KDE softwareari, PostScript, RAW, Mobipocket, eta Blender fitxategien koadro-txikiak azaltzeko aukera ematen diote.</p>
-    <p xml:lang="fi">Näillä liitännäisillä KDE-sovellukset luovat pienoiskuvia PostScript-, RAW-, Mobipocket- ja Blender-tiedostoista.</p>
-    <p xml:lang="fr">Ces modules externes permettent aux logiciels de KDE de créer des vignettes pour les formats de fichiers « PostScript », « Raw », « Mobipocket » et « Blender ».</p>
-    <p xml:lang="ia">Iste plugins permitte a software de KDE de crear thumbnails (miniaturas) per files de PostScript, Raw, Mobypocket e Blender.</p>
-    <p xml:lang="is">Þessar viðbætur gerir KDE-hugbúnaði kleift að birta smámyndir fyrir PostScript, RAW, Mobipocket og Blender skrár.</p>
-    <p xml:lang="it">Queste estensioni permettono al software di KDE di visualizzare le miniature per i file PostScript, RAW, Mobipocket e Blender.</p>
-    <p xml:lang="ka">ეს დამატება საშუალებას აძლევს KDE-ის პროგრამებს შექმნან მინიატურები ისეთი ფაილის ფორმატების, როგორიცაა პოსტსკრიპტი, RAW, Mobipocket და Blender-ის ფაილებიდან.</p>
-    <p xml:lang="ko">이 플러그인을 사용하여 KDE 앱에서 포스트스크립트, RAW, Mobipocket, Blender 파일 등의 섬네일을 만들 수 있습니다.</p>
-    <p xml:lang="nl">Deze plug-ins bieden KDE software het tonen van miniaturen PostScript, RAW, Mobipocket en Blender-bestanden.</p>
-    <p xml:lang="pl">Te wtyczki umożliwiają oprogramowaniu KDE wyświetlanie miniatur dla plików PostScript, RAW, Mobipocket oraz Blender.</p>
-    <p xml:lang="sl">Ti vtičniki omogočajo programski opremi KDE, da prikazuje sličice iz datotek PostScript, RAW, Mobipocket in Blender.</p>
-    <p xml:lang="tr">Bu eklentiler; KDE yazılımlarının PostScript, RAW, Mobipocket ve Blender dosyaları için küçük görseller görüntülemesine olanak tanır.</p>
-    <p xml:lang="uk">Ці додатки уможливлюють для програмного забезпечення KDE показ мініатюр для вмісту файлів PostScript, RAW, Mobipocket і Blender.</p>
-    <p xml:lang="x-test">xxThese plugins allow KDE software to display thumbnails for PostScript, RAW, Mobipocket, and Blender files.xx</p>
-    <p xml:lang="zh-CN">这些插件用于在 KDE 软件中显示 PostScript、RAW、Mobipocket 和 Blender 等文件格式的缩略图。</p>
-    <p xml:lang="zh-TW">這些外掛程式讓 KDE 應用程式能夠顯示 PostScript、RAW、Mobipocket 及 Blender 檔案的縮圖。</p>
   </description>
   <url type="homepage">https://www.kde.org</url>
   <url type="bugtracker">https://bugs.kde.org/</url>
@@ -146,7 +125,7 @@
       <caption xml:lang="sk">Dolphin s miniatúrou PostScript</caption>
       <caption xml:lang="sl">Dolphin s sličico iz PostScripta</caption>
       <caption xml:lang="sv">Dolphin med miniatyrbild för Postscript</caption>
-      <caption xml:lang="tr">PostScript küçük görseli görüntüleyen Dolphin</caption>
+      <caption xml:lang="tr">Postscript küçük resmi içeren Dolphin</caption>
       <caption xml:lang="uk">Dolphin із мініатюрою файла PostScript</caption>
       <caption xml:lang="vi">Dolphin với hình nhỏ PostScript</caption>
       <caption xml:lang="x-test">xxDolphin with PostScript thumbnailxx</caption>
