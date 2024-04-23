@@ -19,3 +19,6 @@ Dependencies:
     'graphics/libkexiv2': '@same'
     'graphics/libkdcraw': '@same'
     'graphics/kdegraphics-mobipocket': '@same'
+
+Options:
+  require-passing-tests-on: ['Linux', 'FreeBSD', 'Windows']
