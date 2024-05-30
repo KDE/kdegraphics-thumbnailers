@@ -23,6 +23,7 @@
   <name xml:lang="fi">kdegraphics-thumbnailers</name>
   <name xml:lang="fr">kdegraphics-thumbnailers</name>
   <name xml:lang="gl">kdegraphics-thumbnailers</name>
+  <name xml:lang="he">kdegraphics-thumbnailers</name>
   <name xml:lang="hi">केडीईग्राफ़िक्स-लघुछविकार</name>
   <name xml:lang="ia">kdegraphics-thumbnailers</name>
   <name xml:lang="is">kdegraphics-thumbnailers</name>
@@ -61,6 +62,7 @@
   <summary xml:lang="fi">Luo grafiikkatiedostoista pienoiskuvat KDE-sovelluksiin</summary>
   <summary xml:lang="fr">Créateurs de vignettes de fichiers au format graphique pour les applications KDE</summary>
   <summary xml:lang="gl">Xeradores de miniaturas para formatos de ficheiro gráficos para aplicacións de KDE</summary>
+  <summary xml:lang="he">מציג תמונות הדגמה ממוזערות של סוגי קובצי גרפיקה ליישומי KDE</summary>
   <summary xml:lang="hi">केडीई अनुप्रयोगों के लिए ग्राफ़िक्स फाइल प्रारूप लघुछविकार</summary>
   <summary xml:lang="ia">Formato de file graphic thumbnailers (de miniaturas) per applicationes de KDE</summary>
   <summary xml:lang="id">File grafik format thumbnailer untuk aplikasi KDE</summary>
@@ -95,6 +97,7 @@
     <p xml:lang="eu">Plugin hauek KDE softwareari, PostScript, RAW, Mobipocket, eta Blender fitxategien koadro-txikiak azaltzeko aukera ematen diote.</p>
     <p xml:lang="fi">Näillä liitännäisillä KDE-sovellukset luovat pienoiskuvia PostScript-, RAW-, Mobipocket- ja Blender-tiedostoista.</p>
     <p xml:lang="fr">Ces modules externes permettent aux logiciels de KDE de créer des vignettes pour les formats de fichiers « PostScript », « Raw », « Mobipocket » et « Blender ».</p>
+    <p xml:lang="he">התוספים האלו מאפשרים לתוכנות של KDE להציג תמונות ממוזערות לקובצי PostScript,‏ RAW (גולמי), Mobipocket ו־Blender.</p>
     <p xml:lang="ia">Iste plugins permitte a software de KDE de crear thumbnails (miniaturas) per files de PostScript, Raw, Mobypocket e Blender.</p>
     <p xml:lang="is">Þessar viðbætur gerir KDE-hugbúnaði kleift að birta smámyndir fyrir PostScript, RAW, Mobipocket og Blender skrár.</p>
     <p xml:lang="it">Queste estensioni permettono al software di KDE di visualizzare le miniature per i file PostScript, RAW, Mobipocket e Blender.</p>
@@ -134,6 +137,7 @@
       <caption xml:lang="fi">PostScript-pienoiskuva Dolphinissa</caption>
       <caption xml:lang="fr">Dolphin avec une vignette PostScript</caption>
       <caption xml:lang="gl">Dolphin cunha miniatura de PostScript</caption>
+      <caption xml:lang="he">Dolphin עם תמונית הדגמה של PostScript</caption>
       <caption xml:lang="hi">पोस्टस्क्रिप्ट लघुछवि के साथ डॉलफ़िन</caption>
       <caption xml:lang="ia">Dolphin con thumbnai (miniatura) PostScript</caption>
       <caption xml:lang="id">Dolphin dengan thumbnail PostScript</caption>
