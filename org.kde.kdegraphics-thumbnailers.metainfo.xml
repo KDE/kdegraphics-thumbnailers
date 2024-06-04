@@ -89,6 +89,7 @@
     <p xml:lang="bg">Тази приставка позволява на приложенията на KDE да създават миниатюри на разширени графични файлови формати като PostScript, Raw, Mobipocket и Blender.</p>
     <p xml:lang="ca">Aquests connectors permeten que el programari KDE mostri miniatures per als fitxers PostScript, RAW, Mobipocket i Blender.</p>
     <p xml:lang="ca-valencia">Estos connectors permeten que el programari KDE mostre miniatures per als fitxers PostScript, RAW, Mobipocket i Blender.</p>
+    <p xml:lang="en-GB">These plugins allow KDE software to display thumbnails for PostScript, RAW, Mobipocket, and Blender files.</p>
     <p xml:lang="eo">Ĉi tiuj kromprogramoj permesas al KDE-programaro montri bildetojn por dosieroj PostScript, RAW, Mobipocket kaj Blender.</p>
     <p xml:lang="es">Estos complementos permiten al software de KDE mostrar miniaturas de los archivos PostScript, RAW, Mobipocket y Blender.</p>
     <p xml:lang="eu">Plugin hauek KDE softwareari, PostScript, RAW, Mobipocket, eta Blender fitxategien koadro-txikiak azaltzeko aukera ematen diote.</p>
