@@ -18,9 +18,9 @@ include(ECMDeprecationSettings)
 
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Gui)
 find_package(KF${QT_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED COMPONENTS KIO)
-find_package(KF${QT_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED COMPONENTS Archive)
 add_definitions(-DQT_USE_QSTRINGBUILDER)
 
+option(DISABLE_BLENDER "Disable the blender thumbnailer." OFF)
 option(DISABLE_MOBIPOCKET "Disable the mobipocket thumbnailer." OFF)
 
 if(QT_MAJOR_VERSION STREQUAL "6")
@@ -85,7 +85,10 @@ if(${KExiv2PackageName}_FOUND AND ${KDcrawPackageName}_FOUND)
 ecm_optional_add_subdirectory(raw)
 endif()
 
-ecm_optional_add_subdirectory(blend)
+if (NOT DISABLE_BLENDER)
+    find_package(KF${QT_MAJOR_VERSION}Archive ${KF_MIN_VERSION} REQUIRED)
+    ecm_optional_add_subdirectory(blend)
+endif()
 
 if(QMobipocket6_FOUND OR QMobipocket_FOUND)
 ecm_optional_add_subdirectory(mobipocket)
