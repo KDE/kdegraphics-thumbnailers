@@ -1,11 +1,11 @@
-kcoreaddons_add_plugin(blenderthumbnail INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/thumbcreator")
+kcoreaddons_add_plugin(blenderthumbnail INSTALL_NAMESPACE "kf6/thumbcreator")
 
 target_sources(blenderthumbnail PRIVATE
     blendercreator.cpp
 )
 
 target_link_libraries(blenderthumbnail
-    KF${QT_MAJOR_VERSION}::KIOGui
-    KF${QT_MAJOR_VERSION}::Archive
+    KF6::KIOGui
+    KF6::Archive
     Qt::Core
 )

@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(gsthumbnail INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/thumbcreator")
+kcoreaddons_add_plugin(gsthumbnail INSTALL_NAMESPACE "kf6/thumbcreator")
 
 target_sources(gsthumbnail PRIVATE
     gscreator.cpp
@@ -7,6 +7,6 @@ target_sources(gsthumbnail PRIVATE
 )
 
 target_link_libraries(gsthumbnail
-    KF${QT_MAJOR_VERSION}::KIOGui
+    KF6::KIOGui
     Qt::Gui
 )
