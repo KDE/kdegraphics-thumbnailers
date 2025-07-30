@@ -35,12 +35,12 @@ KIO::ThumbnailResult BlenderCreator::create(const KIO::ThumbnailRequest &request
     QDataStream blendStream;
     blendStream.setDevice(&file);
     // Blender has an option to save files with gzip compression. First check if we are dealing with such files.
-    QPointer<KCompressionDevice> gzFile;
+    std::unique_ptr<KCompressionDevice> gzFile;
     if(file.peek(2).startsWith("\x1F\x8B")) { // gzip magic (each gzip member starts with ID1(0x1f) and ID2(0x8b))
         file.close();
-        gzFile = new KCompressionDevice(request.url().toLocalFile(), KCompressionDevice::GZip);
+        gzFile = std::make_unique<KCompressionDevice>(request.url().toLocalFile(), KCompressionDevice::GZip);
         if (gzFile->open(QIODevice::ReadOnly)) {
-            blendStream.setDevice(gzFile);
+            blendStream.setDevice(gzFile.get());
         } else {
             return KIO::ThumbnailResult::fail();
         }
