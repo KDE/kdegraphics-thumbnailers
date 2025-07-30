@@ -27,24 +27,40 @@ BlenderCreator::~BlenderCreator() = default;
 
 KIO::ThumbnailResult BlenderCreator::create(const KIO::ThumbnailRequest &request)
 {
-    QFile file (request.url().toLocalFile());
-    if(!file.open(QIODevice::ReadOnly)) {
+    std::unique_ptr<QIODevice> device = std::make_unique<QFile>(request.url().toLocalFile());
+    if(!device->open(QIODevice::ReadOnly)) {
         return KIO::ThumbnailResult::fail();
     }
 
-    QDataStream blendStream;
-    blendStream.setDevice(&file);
-    // Blender has an option to save files with gzip compression. First check if we are dealing with such files.
-    std::unique_ptr<KCompressionDevice> gzFile;
-    if(file.peek(2).startsWith("\x1F\x8B")) { // gzip magic (each gzip member starts with ID1(0x1f) and ID2(0x8b))
-        file.close();
-        gzFile = std::make_unique<KCompressionDevice>(request.url().toLocalFile(), KCompressionDevice::GZip);
-        if (gzFile->open(QIODevice::ReadOnly)) {
-            blendStream.setDevice(gzFile.get());
-        } else {
-            return KIO::ThumbnailResult::fail();
+    // Blender has an option to save files with zstd or gzip compression. First check if we are dealing with such files.
+    QByteArray header = device->peek(4);
+    if (header.size() == 4) {
+        const uint8_t *h = reinterpret_cast<const uint8_t *>(header.constData());
+        uint32_t magic = h[0] | (h[1] << 8) | (h[2] << 16) | (h[3] << 24);
+        // A zstd archive may start with a regular or skippable frame
+        // - 0xFD2FB528 is the magic number for zstd regular frame
+        // - 0x184D2A5 is used to detect skippable frames by checking the top 28 bits (ignoring the lower 4 bits)
+        //   skippable frame magic values are in the range 0x184D2A50..0x184D2A5F, so shifting right by 4 masks them all
+        //   see:
+        // - https://github.com/facebook/zstd/blob/dev/doc/zstd_compression_format.md#zstandard-frames
+        // - https://github.com/facebook/zstd/blob/dev/doc/zstd_compression_format.md#skippable-frames
+        if (magic == 0xFD2FB528 || (magic >> 4) == 0x184D2A5) {
+            device = std::make_unique<KCompressionDevice>(std::move(device), KCompressionDevice::Zstd);
+            if (!device->open(QIODevice::ReadOnly)) {
+                return KIO::ThumbnailResult::fail();
+            }
+        }
+        // In earlier versions of Blender, files were compressed using gzip.
+        else if (header.startsWith("\x1F\x8B")) { // gzip magic (each gzip member starts with ID1(0x1f) and ID2(0x8b))
+            device = std::make_unique<KCompressionDevice>(std::move(device), KCompressionDevice::GZip);
+            if (!device->open(QIODevice::ReadOnly)) {
+                return KIO::ThumbnailResult::fail();
+            }
         }
     }
+
+    QDataStream blendStream;
+    blendStream.setDevice(device.get());
 
     // First to check is file header.
     // BLEND file header format
@@ -59,7 +75,6 @@ KIO::ThumbnailResult BlenderCreator::create(const KIO::ThumbnailRequest &request
     QByteArray head(12, '\0');
     blendStream.readRawData(head.data(), 12);
     if(!head.startsWith("BLENDER") || head.right(3).toInt() < 250 /*blender pre 2.5 had no thumbs*/) {
-        blendStream.device()->close();
         return KIO::ThumbnailResult::fail();
     }
 
@@ -97,7 +112,6 @@ KIO::ThumbnailResult BlenderCreator::create(const KIO::ThumbnailRequest &request
     }
 
     if(!fileBlockHeader.startsWith("TEST")) {
-        blendStream.device()->close();
         return KIO::ThumbnailResult::fail();
     }
 
@@ -109,7 +123,6 @@ KIO::ThumbnailResult BlenderCreator::create(const KIO::ThumbnailRequest &request
 
     qint32 imgSize = fileBlockSize - 8;
     if (imgSize != x * y * 4) {
-        blendStream.device()->close();
         return KIO::ThumbnailResult::fail();
     }
 
@@ -126,7 +139,6 @@ KIO::ThumbnailResult BlenderCreator::create(const KIO::ThumbnailRequest &request
     thumbnail = thumbnail.mirrored();
     QImage img = thumbnail.convertToFormat(QImage::Format_ARGB32_Premultiplied);
 
-    blendStream.device()->close();
     return !img.isNull() ? KIO::ThumbnailResult::pass(img) : KIO::ThumbnailResult::fail();
 }
 
