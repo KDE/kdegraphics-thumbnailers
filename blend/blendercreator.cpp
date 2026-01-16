@@ -120,9 +120,11 @@ KIO::ThumbnailResult BlenderCreator::create(const KIO::ThumbnailRequest &request
     blendStream.readRawData(xy.data(), 8);
     const qint32 x = toInt32(xy.left(4));
     const qint32 y = toInt32(xy.right(4));
-
-    qint32 imgSize = fileBlockSize - 8;
-    if (imgSize != x * y * 4) {
+    const qint32 imgSize = fileBlockSize - 8;
+    if (imgSize <= 0 || x <= 0 || y <= 0) {
+        return KIO::ThumbnailResult::fail();
+    }
+    if (imgSize / 4 / y != x) {
         return KIO::ThumbnailResult::fail();
     }
 
