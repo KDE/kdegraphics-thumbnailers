@@ -265,6 +265,9 @@ KIO::ThumbnailResult GSCreator::create(const KIO::ThumbnailRequest &request)
      break;
   case CDSC_EPSI:
     {
+      if (!bbox) {
+        break;
+      }
       const int xscale = bbox->width() / width;
       const int yscale = bbox->height() / height;
       const int scale = xscale < yscale ? xscale : yscale;
