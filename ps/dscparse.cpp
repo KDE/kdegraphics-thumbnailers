@@ -1769,6 +1769,9 @@ dsc_parse_viewing_orientation(CDSC *dsc, CDSCCTM **pctm)
 dsc_private int 
 dsc_scan_type(CDSC *dsc)
 {
+    if (dsc->data_index > dsc->data_length)
+	return CDSC_NOTDSC;
+
     unsigned char *p;
     unsigned char *line = (unsigned char *)(dsc->data + dsc->data_index);
     int length = dsc->data_length - dsc->data_index;
