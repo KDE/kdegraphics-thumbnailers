@@ -941,12 +941,12 @@ dsc_read_line(CDSC *dsc)
     }
 
     do {
-	dsc->line = dsc->data + dsc->data_index;
-	last = dsc->data + dsc->data_length;
-	if (dsc->data_index == dsc->data_length) {
+	if (dsc->data_index >= dsc->data_length) {
 	    dsc->line_length = 0;
 	    return 0;
 	}
+	dsc->line = dsc->data + dsc->data_index;
+	last = dsc->data + dsc->data_length;
 	if (dsc->eol) {
 	    /* if previous line was complete, increment line count */
 	    dsc->line_count++;
