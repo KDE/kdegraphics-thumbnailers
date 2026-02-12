@@ -2132,6 +2132,9 @@ dsc_scan_comments(CDSC *dsc)
 	char *p;
 	dsc->id = CDSC_DOCUMENTPAPERCOLORS;
 	while (i && (dsc->line[n]!='\r') && (dsc->line[n]!='\n')) {
+	    if (n > dsc->line_length) {
+		break;
+	    }
 	    p = dsc_copy_string(colour, sizeof(colour)-1, 
 		    dsc->line+n, dsc->line_length-n, &i);
 	    if (i && p) {
