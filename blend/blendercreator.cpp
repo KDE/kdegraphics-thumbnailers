@@ -129,7 +129,10 @@ KIO::ThumbnailResult BlenderCreator::create(const KIO::ThumbnailRequest &request
     }
 
     QByteArray imgBuffer(imgSize, '\0');
-    blendStream.readRawData(imgBuffer.data(), imgSize);
+    const qint32 readData = blendStream.readRawData(imgBuffer.data(), imgSize);
+    if (readData != imgSize) {
+        return KIO::ThumbnailResult::fail();
+    }
     QImage thumbnail((const uchar*)imgBuffer.constData(), x, y, QImage::Format_ARGB32);
     if(request.targetSize().width() != 128) {
         thumbnail = thumbnail.scaledToWidth(request.targetSize().width(), Qt::SmoothTransformation);
