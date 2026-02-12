@@ -308,6 +308,10 @@ dsc_scan_data(CDSC *dsc, const char *data, int length)
 
     if (dsc->id == CDSC_NOTDSC)
 	return CDSC_NOTDSC;
+
+    if (dsc->data_index > dsc->data_length)
+	return CDSC_NOTDSC;
+
     dsc->id = CDSC_OK;
     if (dsc->eof)
 	return CDSC_OK;	/* ignore */
