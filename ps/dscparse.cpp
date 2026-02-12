@@ -3111,6 +3111,10 @@ dsc_scan_trailer(CDSC *dsc)
 dsc_private char *
 dsc_alloc_string(CDSC *dsc, const char *str, int len)
 {
+    if (len < 0) {
+	return nullptr;
+    }
+
     char *p;
     if (dsc->string_head == NULL) {
 	dsc->string_head = (CDSCSTRING *)dsc_memalloc(dsc, sizeof(CDSCSTRING));
