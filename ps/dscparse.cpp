@@ -309,9 +309,6 @@ dsc_scan_data(CDSC *dsc, const char *data, int length)
     if (dsc->id == CDSC_NOTDSC)
 	return CDSC_NOTDSC;
 
-    if (dsc->data_index > dsc->data_length)
-	return CDSC_NOTDSC;
-
     dsc->id = CDSC_OK;
     if (dsc->eof)
 	return CDSC_OK;	/* ignore */
@@ -326,6 +323,9 @@ dsc_scan_data(CDSC *dsc, const char *data, int length)
 	    break;
 
 	if (length != 0) {
+	    if (dsc->data_index > dsc->data_length)
+		return CDSC_NOTDSC;
+
 	    /* move existing data if needed */
 	    if (dsc->data_length > CDSC_DATA_LENGTH/2) {
 		memmove(dsc->data, dsc->data + dsc->data_index,
