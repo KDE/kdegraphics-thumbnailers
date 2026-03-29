@@ -2056,7 +2056,7 @@ dsc_scan_comments(CDSC *dsc)
 	char name[MAXSTR];
 	char *p;
 	dsc->id = CDSC_DOCUMENTPAPERSIZES;
-	while (i && (dsc->line[n]!='\r') && (dsc->line[n]!='\n')) {
+	while (i && n < dsc->line_length && (dsc->line[n]!='\r') && (dsc->line[n]!='\n')) {
 	    p = dsc_copy_string(name, sizeof(name)-1,
 		    dsc->line+n, dsc->line_length-n, &i);
 	    if (i && p) {
