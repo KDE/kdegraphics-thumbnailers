@@ -519,20 +519,21 @@ KIO::ThumbnailResult GSCreator::getEPSIPreview(const QString &path, long start, 
   fp = fopen(QFile::encodeName(path), "r");
   if (fp == nullptr) return KIO::ThumbnailResult::fail();
 
-  const long previewsize = end - start + 1;
+  const long bufSize = end - start + 1;
 
-  char *buf = (char *) malloc(previewsize);
+  char *buf = (char *) malloc(bufSize);
   fseek(fp, start, SEEK_SET);
-  int count = fread(buf, sizeof(char), previewsize - 1, fp);
+  const int previewsize = fread(buf, sizeof(char), bufSize - 1, fp);
   fclose(fp);
-  buf[previewsize - 1] = 0;
-  if (count != previewsize - 1)
+  buf[bufSize - 1] = 0;
+  if (previewsize != bufSize - 1)
   {
     free(buf);
     return KIO::ThumbnailResult::fail();
   }
 
-  QString previewstr = QString::fromLatin1(buf);
+  const QString previewstr = QString::fromLatin1(buf);
+  Q_ASSERT(previewstr.length() == previewsize);
   free(buf);
 
   int offset = 0;
