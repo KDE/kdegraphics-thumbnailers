@@ -1162,6 +1162,7 @@ dsc_private int
 dsc_read_doseps(CDSC *dsc)
 {
     unsigned char *line = (unsigned char *)dsc->line;
+    dsc_memfree(dsc, dsc->doseps);
     if ((dsc->doseps = (CDSCDOSEPS *)dsc_memalloc(dsc, sizeof(CDSCDOSEPS))) == NULL)
 	return CDSC_ERROR;	/* no memory */
 	
