@@ -12,6 +12,7 @@
   <name xml:lang="bg">kdegraphics-thumbnailers</name>
   <name xml:lang="ca">kdegraphics-thumbnailers</name>
   <name xml:lang="ca-valencia">kdegraphics-thumbnailers</name>
+  <name xml:lang="cs">kdegraphics-thumbnailers</name>
   <name xml:lang="da">kdegraphics-thumbnailers</name>
   <name xml:lang="de">kdegraphics-thumbnailers</name>
   <name xml:lang="el">kdegraphics-thumbnailers</name>
@@ -54,6 +55,7 @@
   <summary xml:lang="bg">Graphics file format thumbnailers for KDE applications</summary>
   <summary xml:lang="ca">Miniatures per als formats de fitxer de gràfics per a les aplicacions KDE</summary>
   <summary xml:lang="ca-valencia">Miniatures per als formats de fitxer de gràfics per a les aplicacions KDE</summary>
+  <summary xml:lang="cs">Programy pro generování miniatur grafických souborů pro aplikace KDE</summary>
   <summary xml:lang="da">Miniaturedannelse til grafikfilformater til KDE-programmer</summary>
   <summary xml:lang="de">Vorschaubilder von grafischen Dateiformaten für KDE-Anwendungen</summary>
   <summary xml:lang="el">Εικόνες επισκόπησης tvn τύπων αποθήκευσης αρχείων γραφικών για τις εφαρmογές του KDE</summary>
@@ -97,6 +99,7 @@
     <p xml:lang="bg">Тази приставка позволява на приложенията на KDE да създават миниатюри на разширени графични файлови формати като PostScript, Raw, Mobipocket и Blender.</p>
     <p xml:lang="ca">Aquests connectors permeten que el programari KDE mostri miniatures per als fitxers PostScript, RAW, Mobipocket i Blender.</p>
     <p xml:lang="ca-valencia">Estos connectors permeten que el programari KDE mostre miniatures per als fitxers PostScript, RAW, Mobipocket i Blender.</p>
+    <p xml:lang="cs">Tyto moduly umožňují softwaru KDE zobrazovat náhledy souborů ve formátech PostScript, RAW, Mobipocket a Blender.</p>
     <p xml:lang="de">Mit diesem Modul können KDE-Anwendungen Vorschaubilder für die Grafikformate PostScript, RAW und Blender angezeigt werden.</p>
     <p xml:lang="en-GB">These plugins allow KDE software to display thumbnails for PostScript, RAW, Mobipocket, and Blender files.</p>
     <p xml:lang="eo">Ĉi tiuj kromprogramoj permesas al KDE-programaro montri bildetojn por dosieroj PostScript, RAW, Mobipocket kaj Blender.</p>
@@ -138,6 +141,7 @@
       <caption xml:lang="bg">Dolphin с миниатюри на PostScript</caption>
       <caption xml:lang="ca">El Dolphin amb miniatures PostScript</caption>
       <caption xml:lang="ca-valencia">Dolphin amb miniatures PostScript</caption>
+      <caption xml:lang="cs">Dolphin s náhledem ve formátu PostScript</caption>
       <caption xml:lang="da">Dolphin med PostScript-miniature</caption>
       <caption xml:lang="de">Dolphin mit der Vorschau einer PostScript-Datei</caption>
       <caption xml:lang="el">Το Dolphin με εικόνα επισκόπησης PostScript</caption>
