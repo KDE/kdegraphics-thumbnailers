@@ -58,6 +58,8 @@
 #include <QColor>
 #include <QFile>
 #include <QImage>
+#include <QProcess>
+#include <QRegularExpression>
 #include <QVector>
 
 
@@ -94,8 +96,13 @@ static const char * gsargs_ps[] = {
     "-dSAFER",
     "-dPARANOIDSAFER",
     "-dNOPAUSE",
+    // Ghostscript draws hard edges unless it is asked for smooth ones, which a page rendered at the size
+    // it is shown at has no downscaling left to soften.
+    "-dTextAlphaBits=4",
+    "-dGraphicsAlphaBits=4",
     "-dFirstPage=1",
     "-dLastPage=1",
+    nullptr, // resolution
     "-q",
     "-",
     nullptr, // file name
@@ -131,6 +138,24 @@ static const char * gsargs_eps[] = {
     nullptr
 };
 
+// The page size is asked of ghostscript by rendering nothing, so the -c has to come after the file for the
+// page device to be the one the file set up.
+static const char * gsargs_pagesize[] = {
+    "gs",
+    "-q",
+    "-dNOPAUSE",
+    "-dBATCH",
+    "-dSAFER",
+    "-dPARANOIDSAFER",
+    "-sDEVICE=nullpage",
+    "-dFirstPage=1",
+    "-dLastPage=1",
+    nullptr, // file name
+    "-c",
+    "currentpagedevice /PageSize get ==",
+    nullptr
+};
+
 static const char *dvipsargs[] = {
     "dvips",
     "-n",
@@ -150,6 +175,45 @@ namespace {
 	void handle_sigterm( int ) {
 		got_sig_term = true;
 	}
+}
+
+/*
+ * The size of the first page in points, asked of ghostscript without rendering anything, so that a
+ * resolution can be chosen which renders the page at the size that was asked for. An invalid size is
+ * returned when ghostscript does not say.
+ */
+static QSize firstPageSizeInPoints(const QString &path)
+{
+  const char **arg = gsargs_pagesize;
+  QStringList arguments;
+
+  // up to the first zero entry, which is where the file name goes, and on to the end
+  for (++arg; *arg; ++arg) {
+    arguments << QString::fromLatin1(*arg);
+  }
+  arguments << path;
+  for (++arg; *arg; ++arg) {
+    arguments << QString::fromLatin1(*arg);
+  }
+
+  QProcess gs;
+  gs.start(QString::fromLatin1(gsargs_pagesize[0]), arguments);
+  if (!gs.waitForFinished(10000)) {
+    gs.kill();
+    gs.waitForFinished();
+    return QSize();
+  }
+
+  // "[612.0 792.0]"
+  const QString said = QString::fromLatin1(gs.readAllStandardOutput()).simplified();
+  static const QRegularExpression pageSize(QStringLiteral("^\\[\\s*([0-9.]+)\\s+([0-9.]+)\\s*\\]$"));
+  const QRegularExpressionMatch match = pageSize.match(said);
+  if (!match.hasMatch()) {
+    return QSize();
+  }
+
+  const QSize size(qRound(match.captured(1).toDouble()), qRound(match.captured(2).toDouble()));
+  return size.isEmpty() ? QSize() : size;
 }
 
 GSCreator::GSCreator(QObject *parent, const QVariantList &args)
@@ -233,7 +297,22 @@ KIO::ThumbnailResult GSCreator::create(const KIO::ThumbnailRequest &request)
 
   char translation[64] = "";
   char pagesize[32] = "";
-  char resopt[32] = "";
+  char resopt[32] = "-r72";
+
+  if (no_dvi && !is_encapsulated) {
+    // Ghostscript renders a page at 72 dpi unless it is told otherwise, which is the size of the page and
+    // no more, so a bigger thumbnail than that needs a resolution of its own.
+    const QSize page = firstPageSizeInPoints(path);
+    const int longestSide = std::max(page.width(), page.height());
+    if (page.isValid() && longestSide > 0) {
+      // Ghostscript smooths an edge over sixteen tones where a page reader has two hundred and fifty six
+      // of them, so the page is rendered twice the size it is shown at and the rest is left to the
+      // scaling down of it, as the arguments for an encapsulated file have it.
+      const int wanted = 2 * std::max(width, height);
+      const int resolution = std::max(72, qCeil((72.0 * wanted) / longestSide));
+      snprintf(resopt, 31, "-r%i", resolution);
+    }
+  }
 
   if (is_encapsulated) {
     // GhostScript's rendering at the extremely low resolutions
@@ -308,6 +387,11 @@ KIO::ThumbnailResult GSCreator::create(const KIO::ThumbnailRequest &request)
       *arg = pagesize;
 
       // find second zero entry and put resolution there
+      while (*arg) ++arg;
+      *arg = resopt;
+    }
+    else {
+      // find first zero entry and put resolution there
       while (*arg) ++arg;
       *arg = resopt;
     }
