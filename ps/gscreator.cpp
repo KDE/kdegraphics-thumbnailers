@@ -573,6 +573,8 @@ KIO::ThumbnailResult GSCreator::getEPSIPreview(const QString &path, long start, 
 
   unsigned int colors = (1U << depth);
   QImage img(width, height, QImage::Format_Indexed8);
+  if (img.isNull()) return KIO::ThumbnailResult::fail();
+
   img.setColorCount(colors);
 
   if (imagedepth <= 8) {
